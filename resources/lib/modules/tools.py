@@ -97,14 +97,27 @@ def advancedSettings():
 
     imp = importSettings()
 
-    ret = dialog.contextmenu(list(imp.keys()))
+    list_obj = list(imp.keys())
+    list_obj.append('Reset all')
+
+    ret = dialog.contextmenu(list_obj)
+
     filtered = dict((k, v) for k, v in enumerate(imp) if k == ret)
 
     try:
         cats = [v for (k, v) in filtered.items()][0]
     except:
-        WRITE = False
-        return
+        if list_obj[ret] == 'Reset all':
+            dialog.ok(AddonTitle, 'Settings reseted')
+            with open(XML_FILE, 'w') as f:
+                data = xml_data_advSettings_new()
+                f.write(data)
+                
+                WRITE = False
+                return
+        else:
+            WRITE = False
+            return
 
     settings_dict = [v for k, v in imp.items() if k == cats]
 
@@ -128,7 +141,7 @@ def advancedSettings():
         WRITE = False
         return
 
-    if settings[s] == 'memorysize':
+    elif settings[s] == 'memorysize':
         MEM        =  xbmc.getInfoLabel("System.Memory(total)")
         FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
 
@@ -152,7 +165,7 @@ def advancedSettings():
                 CREATE = True
                 defaultt = defaults[s]
             
-            num = dialog.input('Set {title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
+            num = dialog.input('{title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
         
         if num == '':
             WRITE = False
@@ -165,12 +178,10 @@ def advancedSettings():
             else:
                 data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
 
-    if boolean and settings[s] != 'memorysize':
-        message = 'Would you like to enable this setting?'
-        if settings[s] == 'disablehttp2':
-            message = 'Would you like to disable HTTP2 support?'
-        
-        res = dialog.yesno('Set {title}'.format(title=settings[s]), message)
+    elif boolean and settings[s] != 'memorysize':
+        message = 'How would you like to set?'
+
+        res = dialog.yesno('{title}'.format(title=settings[s]), message, yeslabel='True', nolabel='False')
 
         try:
             p = re.compile('<{title}>(\w+)</{title}>'.format(title=settings[s]))
@@ -197,7 +208,7 @@ def advancedSettings():
         except:
             CREATE = True
             defaultt = defaults[s]
-        num = dialog.input('Set {title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
+        num = dialog.input('{title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
         if num == '':
             WRITE = False
             return
