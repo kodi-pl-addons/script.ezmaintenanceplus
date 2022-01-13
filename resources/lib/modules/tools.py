@@ -99,7 +99,7 @@ def advancedSettings():
 
     list_obj = list(imp.keys())
     list_obj.append('Reset all')
-    list_obj.append('Exit')
+    list_obj.append('Close')
 
     ret = dialog.contextmenu(list_obj)
 
@@ -121,7 +121,7 @@ def advancedSettings():
             WRITE = False
             return
 
-        elif list_obj[ret] == 'Exit':
+        elif list_obj[ret] == 'Close':
             WRITE = False
             return
 
@@ -191,7 +191,10 @@ def advancedSettings():
     elif boolean and settings[s] != 'memorysize':
         message = 'How would you like to set?'
 
-        res = dialog.yesno('{title}'.format(title=settings[s]), message, yeslabel='True', nolabel='False')
+        res = dialog.yesnocustom('{title}'.format(title=settings[s]), message, yeslabel='True', nolabel='False', customlabel='')
+        if res == -1 or res == 2:
+            WRITE = False
+            return
 
         try:
             p = re.compile('<{title}>(\w+)</{title}>'.format(title=settings[s]))
