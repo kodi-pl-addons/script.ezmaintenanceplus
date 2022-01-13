@@ -277,8 +277,9 @@ elif action == 'tools': CAT_TOOLS()
 elif action == 'maintenance': MAINTENANCE()
 
 elif action == 'adv_settings':
-    from resources.lib.modules import tools
-    tools.advancedSettings()
+    from resources.lib.modules.advancedsettings import AdvancedSettings
+    AdvancedSettings = AdvancedSettings()
+    AdvancedSettings.unlock()
 
 elif action == 'clear_cache':
     from resources.lib.modules import maintenance
