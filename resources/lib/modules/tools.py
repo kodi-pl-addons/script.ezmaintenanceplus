@@ -109,13 +109,17 @@ def advancedSettings():
         cats = [v for (k, v) in filtered.items()][0]
     except:
         if list_obj[ret] == 'Reset all':
-            dialog.ok(AddonTitle, 'File advancedsettings.xml reseted.')
-            with open(XML_FILE, 'w') as f:
-                data = xml_data_advSettings_new()
-                f.write(data)
-                
-                WRITE = False
-                return
+            ret = dialog.yesno('Reset all', 'Are you sure?')
+            if ret:
+                dialog.ok(AddonTitle, 'File advancedsettings.xml reseted.')
+                with open(XML_FILE, 'w') as f:
+                    data = xml_data_advSettings_new()
+                    f.write(data)
+            else:
+                pass
+
+            WRITE = False
+            return
 
         elif list_obj[ret] == 'Exit':
             WRITE = False
