@@ -1,0 +1,16 @@
+{
+   "Network":{
+      "curlclienttimeout":"10",
+      "curllowspeedtime":"20",
+      "curlretries":"2",
+      "disablehttp2":"false"
+   },
+   "Cache":{
+      "memorysize":"20971520",
+      "buffermode":"1",
+      "readfactor":"20"
+   },
+   "Video":{
+      "fullscreenonmoviestart":"true"
+   }
+}
