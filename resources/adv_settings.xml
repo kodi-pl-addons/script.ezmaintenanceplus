@@ -1,4 +1,8 @@
 {
+   "JSONrpc":{
+      "compactoutput":"false",
+      "tcpport":"9999"
+   },
    "Network":{
       "curlclienttimeout":"10",
       "curllowspeedtime":"20",
@@ -11,6 +15,30 @@
       "readfactor":"20"
    },
    "Video":{
-      "fullscreenonmoviestart":"true"
+      "subsdelayrange":"true",
+	  "maxtempo":"2.1",
+	  "audiodelayrange":"10",
+	  "usetimeseeking":"true",
+	  "timeseekforwardbig":"600",
+	  "timeseekbackwardbig":"-600",
+	  "percentseekforward":"2",
+	  "percentseekbackward":"-2",
+	  "percentseekforwardbig":"10",
+	  "percentseekbackwardbig":"-10",
+	  "fullscreenonmoviestart":"true",
+	  "defaultplayer":"VideoPlayer",
+	  "playcountminimumpercent":"90",
+	  "ignoresecondsatstart":"180",
+	  "ignorepercentatend":"8",
+	  "vdpauscaling":"true",
+	  "enablehighqualityhwscalers":"true",
+	  "dxvaallowhqscaling":"false",
+	  "ppffmpegdeinterlacing":"linblenddeint",
+	  "ppffmpegpostprocessing":"ha:128:7,va,dr",
+	  "autoscalemaxfps":"30",
+	  "checkdxvacompatibility":"value",
+	  "useocclusionquery":"-1",
+	  "fpsdetect":"1",
+	  "delay":["latency", "0"]
    }
 }

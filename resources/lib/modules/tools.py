@@ -76,6 +76,7 @@ def advancedSettings():
 
     WRITE = True
     CREATE = False
+    CATEGORY = False
 
     XML_FILE   =  translatePath(os.path.join('special://home/userdata' , 'advancedsettings.xml'))
 
@@ -142,7 +143,7 @@ def advancedSettings():
     except:
         try:
             form = re.compile('(true|false)')
-            boolean = form.search(defaults[0]).group(1)
+            boolean = form.search(defaults[s]).group(1)
 
         except:
             boolean = False
@@ -152,6 +153,11 @@ def advancedSettings():
         return
 
     elif settings[s] == 'memorysize':
+        if isinstance(defaults[s], list):
+            CATEGORY = True
+            sub = defaults[s][0]
+            defaults[s] = defaults[s][1]
+
         MEM        =  xbmc.getInfoLabel("System.Memory(total)")
         FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
 
@@ -175,7 +181,7 @@ def advancedSettings():
                 CREATE = True
                 defaultt = defaults[s]
             
-            num = dialog.input('{title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
+            num = dialog.input('{title} (default: {default})'.format(title=settings[s], default=defaults[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
         
         if num == '':
             WRITE = False
@@ -183,18 +189,22 @@ def advancedSettings():
         
         else:
             title = settings[s]
+
             if not CREATE:
-                data = re.sub('<'+title+'>\d+</'+title+'>', '<'+title+'>'+num+'</'+title+'>', data)
+                    data = re.sub('<'+title+'>\d+</'+title+'>', '<'+title+'>'+num+'</'+title+'>', data)
             else:
-                data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+                if CATEGORY:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+sub.lower()+'>'+'\n\t\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t\t'+'</'+sub.lower()+'>'+'\n'+'\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+                else:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
 
     elif boolean and settings[s] != 'memorysize':
-        message = 'How would you like to set?'
+        if isinstance(defaults[s], list):
+            CATEGORY = True
+            sub = defaults[s][0]
+            defaults[s] = defaults[s][1]
 
-        res = dialog.yesnocustom('{title}'.format(title=settings[s]), message, yeslabel='True', nolabel='False', customlabel='')
-        if res == -1 or res == 2:
-            WRITE = False
-            return
+        message = 'How would you like to set?'
 
         try:
             p = re.compile('<{title}>(\w+)</{title}>'.format(title=settings[s]))
@@ -202,6 +212,11 @@ def advancedSettings():
         except:
             CREATE = True
             defaultt = defaults[s]
+
+        res = dialog.yesnocustom('{title} (default: {default})'.format(title=settings[s], default=defaults[s]), message, yeslabel='True', nolabel='False', customlabel='')
+        if res == -1 or res == 2:
+            WRITE = False
+            return
 
         if res:
             boolean = 'true'
@@ -212,16 +227,24 @@ def advancedSettings():
         if not CREATE:
             data = re.sub('<'+title+'>\w+</'+title+'>', '<'+title+'>'+boolean+'</'+title+'>', data)
         else:
-            data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+boolean+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+            if CATEGORY:
+                data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+sub.lower()+'>'+'\n\t\t\t'+'<'+title+'>'+boolean+'</'+title+'>'+'\n\t\t'+'</'+sub.lower()+'>'+'\n'+'\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+            else:
+                data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+boolean+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
 
-    elif not boolean and settings[s] != 'memorysize':
+    elif not boolean and settings[s] != 'memorysize' and isinstance(settings[s], int):
+        if isinstance(defaults[s], list):
+            CATEGORY = True
+            sub = defaults[s][0]
+            defaults[s] = defaults[s][1]
+
         try:
             p = re.compile('<{title}>(\d+)</{title}>'.format(title=settings[s]))
             defaultt = p.search(data).group(1)
         except:
             CREATE = True
             defaultt = defaults[s]
-        num = dialog.input('{title}'.format(title=settings[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
+        num = dialog.input('{title} (default: {default})'.format(title=settings[s], default=defaults[s]), defaultt=defaultt, type=xbmcgui.INPUT_NUMERIC)
         if num == '':
             WRITE = False
             return
@@ -230,7 +253,36 @@ def advancedSettings():
             if not CREATE:
                 data = re.sub('<'+title+'>\d+</'+title+'>', '<'+title+'>'+num+'</'+title+'>', data)
             else:
-                data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+                if CATEGORY:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+sub.lower()+'>'+'\n\t\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t\t'+'</'+sub.lower()+'>'+'\n'+'\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+                else:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+num+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+
+    else:
+        if isinstance(defaults[s], list):
+            CATEGORY = True
+            sub = defaults[s][0]
+            defaults[s] = defaults[s][1]
+
+        try:
+            p = re.compile('<{title}>(\w+)</{title}>'.format(title=settings[s]))
+            defaultt = p.search(data).group(1)
+        except:
+            CREATE = True
+            defaultt = defaults[s]
+        label = dialog.input('{title} (default: {default})'.format(title=settings[s], default=defaults[s]), defaultt=defaultt, type=xbmcgui.INPUT_ALPHANUM)
+        if label == '':
+            WRITE = False
+            return
+        else:
+            title = settings[s]
+            if not CREATE:
+                data = re.sub('<'+title+'>\w+</'+title+'>', '<'+title+'>'+label+'</'+title+'>', data)
+            else:
+                if CATEGORY:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+sub.lower()+'>'+'\n\t\t\t'+'<'+title+'>'+label+'</'+title+'>'+'\n\t\t'+'</'+sub.lower()+'>'+'\n'+'\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
+                else:
+                    data = re.sub('</advancedsettings>', '\t'+'<'+cats.lower()+'>'+'\n\t\t'+'<'+title+'>'+label+'</'+title+'>'+'\n\t'+'</'+cats.lower()+'>'+'\n'+'</advancedsettings>', data)
 
     data = re.sub('^(\s{1,5})<.*', '\t', data)
     data = re.sub('^(\s{5,10})<.*', '\t\t', data)
