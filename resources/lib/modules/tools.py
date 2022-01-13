@@ -99,6 +99,7 @@ def advancedSettings():
 
     list_obj = list(imp.keys())
     list_obj.append('Reset all')
+    list_obj.append('Exit')
 
     ret = dialog.contextmenu(list_obj)
 
@@ -108,13 +109,18 @@ def advancedSettings():
         cats = [v for (k, v) in filtered.items()][0]
     except:
         if list_obj[ret] == 'Reset all':
-            dialog.ok(AddonTitle, 'Settings reseted')
+            dialog.ok(AddonTitle, 'File advancedsettings.xml reseted.')
             with open(XML_FILE, 'w') as f:
                 data = xml_data_advSettings_new()
                 f.write(data)
                 
                 WRITE = False
                 return
+
+        elif list_obj[ret] == 'Exit':
+            WRITE = False
+            return
+
         else:
             WRITE = False
             return
