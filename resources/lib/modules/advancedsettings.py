@@ -42,7 +42,7 @@ class AdvancedSettings():
         with open(self.plg_file, "r") as file:
             data = file.read()
 
-        if "Wizard Creator" in data:
+        if "id=\"maintenance\"" in data:
             xbmc.sleep(5)
             xbmcvfs.copy(self.plg_file, self.plb_file)
 

@@ -187,3 +187,970 @@ msgstr "The file 'advancedsettings.xml' will be overwritten, continue?"
 msgctxt "#30802"
 msgid "Please restart Kodi for settings to take effect"
 msgstr "Please restart Kodi for settings to take effect"
+msgctxt "#33001"
+msgid "Maintenance"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Show Stats at Startup"
+msgstr ""
+
+msgctxt "#33003"
+msgid "AutoClean at Startup"
+msgstr ""
+
+msgctxt "#33004"
+msgid "Max Total Files Size (MB)"
+msgstr ""
+
+msgctxt "#33005"
+msgid "Max Number of Zip Files"
+msgstr ""
+
+msgctxt "#33006"
+msgid "Max Total Files Size (MB)"
+msgstr ""
+
+msgctxt "#33007"
+msgid "Wizard Creator"
+msgstr ""
+
+msgctxt "#33008"
+msgid "Enable wizard"
+msgstr ""
+
+msgctxt "#33009"
+msgid "Name"
+msgstr ""
+
+msgctxt "#33010"
+msgid "Zip Url"
+msgstr ""
+
+msgctxt "#33011"
+msgid "Image"
+msgstr ""
+
+msgctxt "#33012"
+msgid "Enable wizard"
+msgstr ""
+
+msgctxt "#33013"
+msgid "Name"
+msgstr ""
+
+msgctxt "#33014"
+msgid "Zip Url"
+msgstr ""
+
+msgctxt "#33015"
+msgid "Image"
+msgstr ""
+
+msgctxt "#33016"
+msgid "Enable wizard"
+msgstr ""
+
+msgctxt "#33017"
+msgid "Name"
+msgstr ""
+
+msgctxt "#33018"
+msgid "Zip Url"
+msgstr ""
+
+msgctxt "#33019"
+msgid "Image"
+msgstr ""
+
+msgctxt "#33020"
+msgid "Enable wizard"
+msgstr ""
+
+msgctxt "#33021"
+msgid "Name"
+msgstr ""
+
+msgctxt "#33022"
+msgid "Zip Url"
+msgstr ""
+
+msgctxt "#33023"
+msgid "Image"
+msgstr ""
+
+msgctxt "#33024"
+msgid "Enable wizard"
+msgstr ""
+
+msgctxt "#33025"
+msgid "Name"
+msgstr ""
+
+msgctxt "#33026"
+msgid "Zip Url"
+msgstr ""
+
+msgctxt "#33027"
+msgid "Image"
+msgstr ""
+
+msgctxt "#33028"
+msgid "Backup/Restore"
+msgstr ""
+
+msgctxt "#33029"
+msgid "Backup Location"
+msgstr ""
+
+msgctxt "#33030"
+msgid "Restore from Zip Location (folder)"
+msgstr ""
+
+msgctxt "#33001"
+msgid "Video"
+msgstr ""
+
+msgctxt "#33002"
+msgid "subsdelayrange"
+msgstr ""
+
+msgctxt "#33003"
+msgid "maxtempo"
+msgstr ""
+
+msgctxt "#33004"
+msgid "audiodelayrange"
+msgstr ""
+
+msgctxt "#33005"
+msgid "usetimeseeking"
+msgstr ""
+
+msgctxt "#33006"
+msgid "timeseekforwardbig"
+msgstr ""
+
+msgctxt "#33007"
+msgid "timeseekbackwardbig"
+msgstr ""
+
+msgctxt "#33008"
+msgid "percentseekforward"
+msgstr ""
+
+msgctxt "#33009"
+msgid "percentseekbackward"
+msgstr ""
+
+msgctxt "#33010"
+msgid "percentseekforwardbig"
+msgstr ""
+
+msgctxt "#33011"
+msgid "percentseekbackwardbig"
+msgstr ""
+
+msgctxt "#33012"
+msgid "fullscreenonmoviestart"
+msgstr ""
+
+msgctxt "#33013"
+msgid "defaultplayer"
+msgstr ""
+
+msgctxt "#33014"
+msgid "playcountminimumpercent"
+msgstr ""
+
+msgctxt "#33015"
+msgid "ignoresecondsatstart"
+msgstr ""
+
+msgctxt "#33016"
+msgid "ignorepercentatend"
+msgstr ""
+
+msgctxt "#33017"
+msgid "vdpauscaling"
+msgstr ""
+
+msgctxt "#33018"
+msgid "enablehighqualityhwscalers"
+msgstr ""
+
+msgctxt "#33019"
+msgid "dxvaallowhqscaling"
+msgstr ""
+
+msgctxt "#33020"
+msgid "ppffmpegdeinterlacing"
+msgstr ""
+
+msgctxt "#33021"
+msgid "ppffmpegpostprocessing"
+msgstr ""
+
+msgctxt "#33022"
+msgid "autoscalemaxfps"
+msgstr ""
+
+msgctxt "#33023"
+msgid "override - fps"
+msgstr ""
+
+msgctxt "#33024"
+msgid "override - refresh"
+msgstr ""
+
+msgctxt "#33025"
+msgid "fallback - refresh"
+msgstr ""
+
+msgctxt "#33026"
+msgid "checkdxvacompatibility"
+msgstr ""
+
+msgctxt "#33027"
+msgid "useocclusionquery"
+msgstr ""
+
+msgctxt "#33028"
+msgid "fpsdetect"
+msgstr ""
+
+msgctxt "#33029"
+msgid "Video Library"
+msgstr ""
+
+msgctxt "#33030"
+msgid "playlistasfolders"
+msgstr ""
+
+msgctxt "#33031"
+msgid "playlistretries"
+msgstr ""
+
+msgctxt "#33032"
+msgid "playlisttimeout"
+msgstr ""
+
+msgctxt "#33033"
+msgid "sorttokens - token"
+msgstr ""
+
+msgctxt "#33034"
+msgid "sorttokens - separators"
+msgstr ""
+
+msgctxt "#33035"
+msgid "videoextensions - add"
+msgstr ""
+
+msgctxt "#33036"
+msgid "videoextensions - remove"
+msgstr ""
+
+msgctxt "#33037"
+msgid "allitemsonbottom"
+msgstr ""
+
+msgctxt "#33038"
+msgid "cleanonupdate"
+msgstr ""
+
+msgctxt "#33039"
+msgid "usefasthash"
+msgstr ""
+
+msgctxt "#33040"
+msgid "recentlyaddeditems"
+msgstr ""
+
+msgctxt "#33041"
+msgid "itemseparator"
+msgstr ""
+
+msgctxt "#33042"
+msgid "exportautothumbs"
+msgstr ""
+
+msgctxt "#33043"
+msgid "importwatchedstate"
+msgstr ""
+
+msgctxt "#33044"
+msgid "importresumepoint"
+msgstr ""
+
+msgctxt "#33045"
+msgid "dateadded"
+msgstr ""
+
+msgctxt "#33046"
+msgid "tvshowmatching"
+msgstr ""
+
+msgctxt "#33047"
+msgid "1."
+msgstr ""
+
+msgctxt "#33048"
+msgid "2."
+msgstr ""
+
+msgctxt "#33049"
+msgid "3."
+msgstr ""
+
+msgctxt "#33050"
+msgid "4."
+msgstr ""
+
+msgctxt "#33051"
+msgid "5."
+msgstr ""
+
+msgctxt "#33052"
+msgid "6."
+msgstr ""
+
+msgctxt "#33053"
+msgid "7."
+msgstr ""
+
+msgctxt "#33054"
+msgid "8."
+msgstr ""
+
+msgctxt "#33055"
+msgid "moviestacking"
+msgstr ""
+
+msgctxt "#33056"
+msgid "1."
+msgstr ""
+
+msgctxt "#33057"
+msgid "2."
+msgstr ""
+
+msgctxt "#33058"
+msgid "3."
+msgstr ""
+
+msgctxt "#33059"
+msgid "4."
+msgstr ""
+
+msgctxt "#33060"
+msgid "folderstacking"
+msgstr ""
+
+msgctxt "#33061"
+msgid "1."
+msgstr ""
+
+msgctxt "#33062"
+msgid "2."
+msgstr ""
+
+msgctxt "#33063"
+msgid "3."
+msgstr ""
+
+msgctxt "#33064"
+msgid "4."
+msgstr ""
+
+msgctxt "#33065"
+msgid "tvmultipartmatching (regexp)"
+msgstr ""
+
+msgctxt "#33066"
+msgid "trailermatching (regexp)"
+msgstr ""
+
+msgctxt "#33067"
+msgid "videoextensions - add"
+msgstr ""
+
+msgctxt "#33068"
+msgid "videoextensions - remove"
+msgstr ""
+
+msgctxt "#33069"
+msgid "discstubextensions - add"
+msgstr ""
+
+msgctxt "#33070"
+msgid "discstubextensions - remove"
+msgstr ""
+
+msgctxt "#33071"
+msgid "cleandatetime (regexp)"
+msgstr ""
+
+msgctxt "#33072"
+msgid "excludefromscan (regexp)"
+msgstr ""
+
+msgctxt "#33073"
+msgid "excludetvshowsfromscan (regexp)"
+msgstr ""
+
+msgctxt "#33074"
+msgid "excludefromlisting (regexp)"
+msgstr ""
+
+msgctxt "#33075"
+msgid "cleanstrings"
+msgstr ""
+
+msgctxt "#33076"
+msgid "1."
+msgstr ""
+
+msgctxt "#33077"
+msgid "2."
+msgstr ""
+
+msgctxt "#33078"
+msgid "videodatabase - type"
+msgstr ""
+
+msgctxt "#33079"
+msgid "videodatabase - host"
+msgstr ""
+
+msgctxt "#33080"
+msgid "videodatabase - port"
+msgstr ""
+
+msgctxt "#33081"
+msgid "videodatabase - name"
+msgstr ""
+
+msgctxt "#33082"
+msgid "videodatabase - user"
+msgstr ""
+
+msgctxt "#33083"
+msgid "videodatabase - pass"
+msgstr ""
+
+msgctxt "#33084"
+msgid "videodatabase - compression"
+msgstr ""
+
+msgctxt "#33085"
+msgid "videodatabase - key"
+msgstr ""
+
+msgctxt "#33086"
+msgid "videodatabase - cert"
+msgstr ""
+
+msgctxt "#33087"
+msgid "videodatabase - ca"
+msgstr ""
+
+msgctxt "#33088"
+msgid "videodatabase - capath"
+msgstr ""
+
+msgctxt "#33089"
+msgid "videodatabase - ciphers"
+msgstr ""
+
+msgctxt "#33090"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#33091"
+msgid "headroom"
+msgstr ""
+
+msgctxt "#33092"
+msgid "defaultplayer"
+msgstr ""
+
+msgctxt "#33093"
+msgid "ac3downmixgain"
+msgstr ""
+
+msgctxt "#33094"
+msgid "usetimeseeking"
+msgstr ""
+
+msgctxt "#33095"
+msgid "timeseekforwardbig"
+msgstr ""
+
+msgctxt "#33096"
+msgid "timeseekbackwardbig"
+msgstr ""
+
+msgctxt "#33097"
+msgid "playcountminimumpercent"
+msgstr ""
+
+msgctxt "#33098"
+msgid "applydrc"
+msgstr ""
+
+msgctxt "#33099"
+msgid "limiterhold"
+msgstr ""
+
+msgctxt "#33100"
+msgid "limiterrelease"
+msgstr ""
+
+msgctxt "#33101"
+msgid "Audio Library"
+msgstr ""
+
+msgctxt "#33102"
+msgid "excludefromscan (regexp)"
+msgstr ""
+
+msgctxt "#33103"
+msgid "excludefromlisting (regexp)"
+msgstr ""
+
+msgctxt "#33104"
+msgid "musicextensions - add"
+msgstr ""
+
+msgctxt "#33105"
+msgid "musicextensions - remove"
+msgstr ""
+
+msgctxt "#33106"
+msgid "cddbaddress"
+msgstr ""
+
+msgctxt "#33107"
+msgid "songinfoduration"
+msgstr ""
+
+msgctxt "#33108"
+msgid "allitemsonbottom"
+msgstr ""
+
+msgctxt "#33109"
+msgid "cleanonupdate"
+msgstr ""
+
+msgctxt "#33110"
+msgid "recentlyaddeditems"
+msgstr ""
+
+msgctxt "#33111"
+msgid "albumformat"
+msgstr ""
+
+msgctxt "#33112"
+msgid "prioritiseapetags"
+msgstr ""
+
+msgctxt "#33113"
+msgid "itemseparator"
+msgstr ""
+
+msgctxt "#33114"
+msgid "dateadded"
+msgstr ""
+
+msgctxt "#33115"
+msgid "useisodates"
+msgstr ""
+
+msgctxt "#33116"
+msgid "musicfilenamefilter"
+msgstr ""
+
+msgctxt "#33117"
+msgid "artistseparator1"
+msgstr ""
+
+msgctxt "#33118"
+msgid "artistseparator2"
+msgstr ""
+
+msgctxt "#33119"
+msgid "artistseparator3"
+msgstr ""
+
+msgctxt "#33120"
+msgid "artistseparator4"
+msgstr ""
+
+msgctxt "#33121"
+msgid "artistseparator5"
+msgstr ""
+
+msgctxt "#33122"
+msgid "artistseparator6"
+msgstr ""
+
+msgctxt "#33123"
+msgid "artistseparator7"
+msgstr ""
+
+msgctxt "#33124"
+msgid "artistseparator8"
+msgstr ""
+
+msgctxt "#33125"
+msgid "musicdatabase - type"
+msgstr ""
+
+msgctxt "#33126"
+msgid "musicdatabase - host"
+msgstr ""
+
+msgctxt "#33127"
+msgid "musicdatabase - port"
+msgstr ""
+
+msgctxt "#33128"
+msgid "musicdatabase - name"
+msgstr ""
+
+msgctxt "#33129"
+msgid "musicdatabase - user"
+msgstr ""
+
+msgctxt "#33130"
+msgid "musicdatabase - pass"
+msgstr ""
+
+msgctxt "#33131"
+msgid "musicdatabase - compression"
+msgstr ""
+
+msgctxt "#33132"
+msgid "musicdatabase - key"
+msgstr ""
+
+msgctxt "#33133"
+msgid "musicdatabase - cert"
+msgstr ""
+
+msgctxt "#33134"
+msgid "musicdatabase - ca"
+msgstr ""
+
+msgctxt "#33135"
+msgid "musicdatabase - capath"
+msgstr ""
+
+msgctxt "#33136"
+msgid "musicdatabase - ciphers"
+msgstr ""
+
+msgctxt "#33137"
+msgid "Photo"
+msgstr ""
+
+msgctxt "#33138"
+msgid "pictureextensions - add"
+msgstr ""
+
+msgctxt "#33139"
+msgid "pictureextensions - remove"
+msgstr ""
+
+msgctxt "#33140"
+msgid "pictureexcludes1"
+msgstr ""
+
+msgctxt "#33141"
+msgid "pictureexcludes2"
+msgstr ""
+
+msgctxt "#33142"
+msgid "pictureexcludes3"
+msgstr ""
+
+msgctxt "#33143"
+msgid "pictureexcludes4"
+msgstr ""
+
+msgctxt "#33144"
+msgid "slideshow - panamount"
+msgstr ""
+
+msgctxt "#33145"
+msgid "slideshow - zoomamount"
+msgstr ""
+
+msgctxt "#33146"
+msgid "blackbarcompensation"
+msgstr ""
+
+msgctxt "#33147"
+msgid "Network"
+msgstr ""
+
+msgctxt "#33148"
+msgid "ftp - remotethumbs"
+msgstr ""
+
+msgctxt "#33149"
+msgid "samba - doscodepage"
+msgstr ""
+
+msgctxt "#33150"
+msgid "samba - clienttimeout"
+msgstr ""
+
+msgctxt "#33151"
+msgid "samba - statfiles"
+msgstr ""
+
+msgctxt "#33152"
+msgid "hosts - ip address"
+msgstr ""
+
+msgctxt "#33153"
+msgid "hosts - hostname"
+msgstr ""
+
+msgctxt "#33154"
+msgid "network - curlclienttimeout"
+msgstr ""
+
+msgctxt "#33155"
+msgid "network - curllowspeedtime"
+msgstr ""
+
+msgctxt "#33156"
+msgid "network - curlretries"
+msgstr ""
+
+msgctxt "#33157"
+msgid "network - httpproxyusername"
+msgstr ""
+
+msgctxt "#33158"
+msgid "network - httpproxypassword"
+msgstr ""
+
+msgctxt "#33159"
+msgid "network - disableipv6"
+msgstr ""
+
+msgctxt "#33160"
+msgid "network - disablehttp2"
+msgstr ""
+
+msgctxt "#33161"
+msgid "network - nfstimeout"
+msgstr ""
+
+msgctxt "#33162"
+msgid "network - catrustfile"
+msgstr ""
+
+msgctxt "#33163"
+msgid "EPG"
+msgstr ""
+
+msgctxt "#33164"
+msgid "updatecheckinterval"
+msgstr ""
+
+msgctxt "#33165"
+msgid "updateemptytagsinterval"
+msgstr ""
+
+msgctxt "#33166"
+msgid "cleanupinterval"
+msgstr ""
+
+msgctxt "#33167"
+msgid "activetagcheckinterval"
+msgstr ""
+
+msgctxt "#33168"
+msgid "retryinterruptedupdateinterval"
+msgstr ""
+
+msgctxt "#33169"
+msgid "displayupdatepopup"
+msgstr ""
+
+msgctxt "#33170"
+msgid "displayincrementalupdatepopup"
+msgstr ""
+
+msgctxt "#33171"
+msgid "EDL"
+msgstr ""
+
+msgctxt "#33172"
+msgid "mergeshortcommbreaks"
+msgstr ""
+
+msgctxt "#33173"
+msgid "maxcommbreaklength"
+msgstr ""
+
+msgctxt "#33174"
+msgid "mincommbreaklength"
+msgstr ""
+
+msgctxt "#33175"
+msgid "maxcommbreakgap"
+msgstr ""
+
+msgctxt "#33176"
+msgid "commbreakautowait"
+msgstr ""
+
+msgctxt "#33177"
+msgid "commbreakautowind"
+msgstr ""
+
+msgctxt "#33178"
+msgid "PVR"
+msgstr ""
+
+msgctxt "#33179"
+msgid "timecorrection"
+msgstr ""
+
+msgctxt "#33180"
+msgid "infotoggleinterval"
+msgstr ""
+
+msgctxt "#33181"
+msgid "channeliconsautoscan"
+msgstr ""
+
+msgctxt "#33182"
+msgid "autoscaniconsuserset"
+msgstr ""
+
+msgctxt "#33183"
+msgid "numericchannelswitchtimeout"
+msgstr ""
+
+msgctxt "#33184"
+msgid "sortmethod"
+msgstr ""
+
+msgctxt "#33185"
+msgid "sortorder"
+msgstr ""
+
+msgctxt "#33186"
+msgid "Cache"
+msgstr ""
+
+msgctxt "#33187"
+msgid "buffermode"
+msgstr ""
+
+msgctxt "#33188"
+msgid "memorysize"
+msgstr ""
+
+msgctxt "#33189"
+msgid "readfactor"
+msgstr ""
+
+msgctxt "#33190"
+msgid "System"
+msgstr ""
+
+msgctxt "#33191"
+msgid "loglevel"
+msgstr ""
+
+msgctxt "#33192"
+msgid "Hide 'Enable Debugging' Setting"
+msgstr ""
+
+msgctxt "#33193"
+msgid "skiploopfilter"
+msgstr ""
+
+msgctxt "#33194"
+msgid "forcedswaptime"
+msgstr ""
+
+msgctxt "#33195"
+msgid "videoscanner - ignoreerrors"
+msgstr ""
+
+msgctxt "#33196"
+msgid "remotedelay"
+msgstr ""
+
+msgctxt "#33197"
+msgid "enablemultimediakeys"
+msgstr ""
+
+msgctxt "#33198"
+msgid "scanirserver"
+msgstr ""
+
+msgctxt "#33199"
+msgid "restrictcapsmask"
+msgstr ""
+
+msgctxt "#33200"
+msgid "gui - algorithmdirtyregions"
+msgstr ""
+
+msgctxt "#33201"
+msgid "gui - visualizedirtyregions"
+msgstr ""
+
+msgctxt "#33202"
+msgid "gui - smartredraw"
+msgstr ""
+
+msgctxt "#33203"
+msgid "showexitbutton"
+msgstr ""
+
+msgctxt "#33204"
+msgid "fullscreen"
+msgstr ""
+
+msgctxt "#33205"
+msgid "splash"
+msgstr ""
+
+msgctxt "#33206"
+msgid "cputempcommand"
+msgstr ""
+
+msgctxt "#33207"
+msgid "gputempcommand"
+msgstr ""
+
+msgctxt "#33208"
+msgid "glrectanglehack"
+msgstr ""
+
+msgctxt "#33209"
+msgid "alwaysontop"
+msgstr ""
+
+msgctxt "#33210"
+msgid "minimizetotray"
+msgstr ""
+
+msgctxt "#33211"
+msgid "jsonrpc - compactoutput"
+msgstr ""
+
+msgctxt "#33212"
+msgid "jsonrpc - tcpport"
+msgstr ""
