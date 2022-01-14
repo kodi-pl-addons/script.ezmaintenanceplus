@@ -37,10 +37,12 @@ class AdvancedSettings():
         self.adv_settings = None
 
     def unlock(self):
-        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)    
+        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)  
+
+        xbmc.sleep(5)  
         xbmcvfs.copy(self.plg_file, self.plb_file)
 
-
+        xbmc.sleep(1)
         xbmcvfs.copy(srcfname, self.plg_file)
 
         self.plg_settings = self._load_xml_from_file(self.plg_file)
@@ -48,18 +50,16 @@ class AdvancedSettings():
             self.adv_settings = self._load_xml_from_file(self.ads_file)
             # self.gui_settings = self._load_xml_from_file(self.gui_file)
         except ET.ParseError:
-            xbmcgui.Dialog().notification(self.addon.getAddonInfo("name"),
-                                          "%s %s" % (self.language(30800), ADSFNAME),
-                                          xbmcgui.NOTIFICATION_ERROR, 5000)
-
+            xbmcgui.Dialog().notification(self.addon.getAddonInfo("name"), "%s %s" % (self.language(30800), ADSFNAME), xbmcgui.NOTIFICATION_ERROR, 5000)
 
         self._load()
-
         self.addon.openSettings(self.id)
-        if xbmcgui.Dialog().yesno(self.addon.getAddonInfo("name"), self.language(30801)):
-            self._save()
+        
+        ret = self._save(self.addon)
+        if ret:
             xbmcgui.Dialog().notification(self.addon.getAddonInfo("name"), self.language(30802), xbmcgui.NOTIFICATION_INFO, 5000)
 
+        xbmcvfs.copy(self.plb_file, self.plg_file)
 
     def _load(self):
 
@@ -68,7 +68,7 @@ class AdvancedSettings():
                 setting_id = s.attrib['id']
                 self.addon.setSetting(setting_id, self._read_adv_setting_value(cat, s))
 
-    def _save(self):
+    def _save(self, addon):
         if self.adv_settings is None:
             self.adv_settings = ET.fromstring("<advancedsettings version='1.0' />")
 
@@ -81,11 +81,14 @@ class AdvancedSettings():
 
             # remove empty categories
             adv_cat = self.adv_settings.find(cat.attrib['id'])
+            
             if not (adv_cat is None) and len(adv_cat) == 0:
                 self.adv_settings.remove(adv_cat)
 
         self._backup_file(self.ads_file)
-        self._save_pretty_xml(self.adv_settings, self.ads_file)
+        ret = self._save_pretty_xml(self.adv_settings, self.ads_file, addon)
+
+        return ret
 
     def _save_adv_setting_value(self, cat, s, value):
         xbmc.log("Category %s, setting %s" % (cat.attrib['id'], s.attrib['id']), xbmc.LOGDEBUG)
@@ -278,11 +281,21 @@ class AdvancedSettings():
             return None
 
     @staticmethod
-    def _save_pretty_xml(element, output_xml):
+    def _save_pretty_xml(element, output_xml, addon):
+        with open(output_xml, "r") as file:
+            read_xml_string = file.read()
+
         xml_string = minidom.parseString(ET.tostring(element)).toprettyxml()
         xml_string = "".join([s for s in xml_string.splitlines(True) if s.strip()])
-        with open(output_xml, "w") as file_out:
-            file_out.write(xml_string)
+
+        if xml_string == read_xml_string:
+            return False
+
+        ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))
+        if ret:
+            with open(output_xml, "w") as file_out:
+                file_out.write(xml_string)
+                return True
 
 
     @staticmethod
