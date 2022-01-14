@@ -39,11 +39,15 @@ class AdvancedSettings():
     def unlock(self):
         srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)  
 
-        xbmc.sleep(5)  
-        xbmcvfs.copy(self.plg_file, self.plb_file)
+        with open(self.plg_file, "r") as file:
+            data = file.read()
 
-        xbmc.sleep(1)
-        xbmcvfs.copy(srcfname, self.plg_file)
+        if "Wizard Creator" in data:
+            xbmc.sleep(5)
+            xbmcvfs.copy(self.plg_file, self.plb_file)
+
+            xbmc.sleep(1)
+            xbmcvfs.copy(srcfname, self.plg_file)
 
         self.plg_settings = self._load_xml_from_file(self.plg_file)
         try:
