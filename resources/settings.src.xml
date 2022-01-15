@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <settings version="1">
 	<section id="script.ezmaintenanceplus">
-		<category id="video" label="33001" help="">
+		<category id="video" label="30260" help="">
 			<group id="1">
 				<setting id="subsdelayrange" type="integer" label="33002" help="">
 					<level>1</level>
@@ -785,7 +785,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="audio" label="33090" help="">
+		<category id="audio" label="30360" help="">
 			<group id="1">
 				<setting id="headroom" type="integer" label="33091" help="">
 					<level>1</level>
@@ -867,7 +867,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="audio library" label="33101" help="">
+		<category id="audio library" label="30380" help="">
 			<group id="1">
 				<setting id="audio/excludefromscan/regexp" type="string" label="33072" help="">
 					<level>1</level>
@@ -1195,7 +1195,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="photo" label="33137" help="">
+		<category id="photo" label="30650" help="">
 			<group id="1">
 				<setting id="pictureextensions/add" type="string" label="33138" help="">
 					<level>1</level>
@@ -1284,7 +1284,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="network" label="33147" help="">
+		<category id="network" label="30600" help="">
 			<group id="1">
 				<setting id="ftp/remotethumbs" type="boolean" label="33148" help="">
 					<level>1</level>
@@ -1401,7 +1401,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="epg" label="33163" help="">
+		<category id="epg" label="30230" help="">
 			<group id="1">
 				<setting id="updatecheckinterval" type="integer" label="33164" help="">
 					<level>1</level>
@@ -1450,7 +1450,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="edl" label="33171" help="">
+		<category id="edl" label="30400" help="">
 			<group id="1">
 				<setting id="mergeshortcommbreaks" type="boolean" label="33172" help="">
 					<level>1</level>
@@ -1494,7 +1494,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="pvr" label="33178" help="">
+		<category id="pvr" label="30240" help="">
 			<group id="1">
 				<setting id="timecorrection" type="integer" label="33179" help="">
 					<level>1</level>
@@ -1553,7 +1553,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="cache" label="33186" help="">
+		<category id="cache" label="30000" help="">
 			<group id="1">
 				<setting id="buffermode" type="integer" label="33187" help="">
 					<level>0</level>
@@ -1571,7 +1571,7 @@
 				</setting>
 				<setting id="memorysize" type="integer" label="33188" help="">
 					<level>0</level>
-					<default>20971520</default>
+					<default>8512339968</default>
 					<control type="edit" format="integer">
 						<heading>memorysize</heading>
 					</control>
@@ -1585,7 +1585,7 @@
 				</setting>
 			</group>
 		</category>
-		<category id="system" label="33190" help="">
+		<category id="system" label="30200" help="">
 			<group id="1">
 				<setting id="loglevel" type="integer" label="33191" help="">
 					<level>1</level>

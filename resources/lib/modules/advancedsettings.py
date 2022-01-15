@@ -8,6 +8,9 @@ import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
+from math import trunc
+import re
+
 import xbmc
 import xbmcgui
 import xbmcvfs
@@ -36,8 +39,42 @@ class AdvancedSettings():
         self.plg_settings = None
         self.adv_settings = None
 
+    def mem_check(self):
+        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)
+
+        with open(srcfname, "r+") as file_buffer:
+            src = file_buffer.read()
+
+            p = re.compile('<setting id="memorysize" type="integer" label="33188" help="">\n<level>0</level>\n<default>(.+?)</default>')
+
+            try:
+                buffer = '<default>' + p.search(src).group(1) + '</default>'
+            except:
+                buffer = '<default>20971520</default>'
+
+            src = re.sub(buffer, self.optimal_memory(), src)
+            
+            file_buffer.seek(0)
+            file_buffer.write(src)
+            file_buffer.truncate()
+            file_buffer.close()
+
+    def optimal_memory(self):
+        MEM        =  xbmc.getInfoLabel("System.Memory(total)")
+        FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
+
+        BUFFER_F   =  re.sub('[^0-9]','',FREEMEM)
+        BUFFER_F   = int(BUFFER_F) / 3
+        BUFFERSIZE = trunc(BUFFER_F * 1024 * 1024)
+
+        B = '<default>' + str(BUFFERSIZE) + '</default>'
+
+        return B
+
     def unlock(self):
-        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)  
+        self.mem_check()
+        
+        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)
 
         with open(self.plg_file, "r") as file:
             data = file.read()
@@ -286,13 +323,16 @@ class AdvancedSettings():
 
     @staticmethod
     def _save_pretty_xml(element, output_xml, addon):
-        with open(output_xml, "r") as file:
-            read_xml_string = file.read()
+        try:
+            with open(output_xml, "r") as file:
+                read_xml_string = file.read()
+        except:
+            read_xml_string = ''
 
         xml_string = minidom.parseString(ET.tostring(element)).toprettyxml()
         xml_string = "".join([s for s in xml_string.splitlines(True) if s.strip()])
 
-        if xml_string == read_xml_string:
+        if xml_string == read_xml_string or read_xml_string == '':
             return False
 
         ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))

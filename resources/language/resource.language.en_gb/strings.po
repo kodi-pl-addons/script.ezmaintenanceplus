@@ -307,10 +307,6 @@ msgctxt "#33030"
 msgid "Restore from Zip Location (folder)"
 msgstr ""
 
-msgctxt "#33001"
-msgid "Video"
-msgstr ""
-
 msgctxt "#33002"
 msgid "subsdelayrange"
 msgstr ""
@@ -420,7 +416,7 @@ msgid "fpsdetect"
 msgstr ""
 
 msgctxt "#33029"
-msgid "Video Library"
+msgid "30500"
 msgstr ""
 
 msgctxt "#33030"
@@ -663,10 +659,6 @@ msgctxt "#33089"
 msgid "videodatabase - ciphers"
 msgstr ""
 
-msgctxt "#33090"
-msgid "Audio"
-msgstr ""
-
 msgctxt "#33091"
 msgid "headroom"
 msgstr ""
@@ -705,10 +697,6 @@ msgstr ""
 
 msgctxt "#33100"
 msgid "limiterrelease"
-msgstr ""
-
-msgctxt "#33101"
-msgid "Audio Library"
 msgstr ""
 
 msgctxt "#33102"
@@ -851,10 +839,6 @@ msgctxt "#33136"
 msgid "musicdatabase - ciphers"
 msgstr ""
 
-msgctxt "#33137"
-msgid "Photo"
-msgstr ""
-
 msgctxt "#33138"
 msgid "pictureextensions - add"
 msgstr ""
@@ -889,10 +873,6 @@ msgstr ""
 
 msgctxt "#33146"
 msgid "blackbarcompensation"
-msgstr ""
-
-msgctxt "#33147"
-msgid "Network"
 msgstr ""
 
 msgctxt "#33148"
@@ -955,10 +935,6 @@ msgctxt "#33162"
 msgid "network - catrustfile"
 msgstr ""
 
-msgctxt "#33163"
-msgid "EPG"
-msgstr ""
-
 msgctxt "#33164"
 msgid "updatecheckinterval"
 msgstr ""
@@ -987,10 +963,6 @@ msgctxt "#33170"
 msgid "displayincrementalupdatepopup"
 msgstr ""
 
-msgctxt "#33171"
-msgid "EDL"
-msgstr ""
-
 msgctxt "#33172"
 msgid "mergeshortcommbreaks"
 msgstr ""
@@ -1013,10 +985,6 @@ msgstr ""
 
 msgctxt "#33177"
 msgid "commbreakautowind"
-msgstr ""
-
-msgctxt "#33178"
-msgid "PVR"
 msgstr ""
 
 msgctxt "#33179"
@@ -1047,10 +1015,6 @@ msgctxt "#33185"
 msgid "sortorder"
 msgstr ""
 
-msgctxt "#33186"
-msgid "Cache"
-msgstr ""
-
 msgctxt "#33187"
 msgid "buffermode"
 msgstr ""
@@ -1063,16 +1027,12 @@ msgctxt "#33189"
 msgid "readfactor"
 msgstr ""
 
-msgctxt "#33190"
-msgid "System"
-msgstr ""
-
 msgctxt "#33191"
 msgid "loglevel"
 msgstr ""
 
 msgctxt "#33192"
-msgid "Hide 'Enable Debugging' Setting"
+msgid "30110"
 msgstr ""
 
 msgctxt "#33193"
