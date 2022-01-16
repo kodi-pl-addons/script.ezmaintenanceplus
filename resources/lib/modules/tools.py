@@ -34,14 +34,11 @@ addonInfo    = xbmcaddon.Addon().getAddonInfo
 AddonTitle="EZ Maintenance+"
 AddonID ='script.ezmaintenanceplus'
 
-ADDON = xbmcaddon.Addon(id = AddonID)
-
 # Code to map the old translatePath
 try:
     translatePath = xbmcvfs.translatePath
 except AttributeError:
     translatePath = xbmc.translatePath
-
 
 def open_Settings():
     open_Settings = xbmcaddon.Addon(id=AddonID).openSettings()
@@ -71,7 +68,6 @@ def ENABLE_ADDONS():
 
 
 def FIX_SPECIAL():
-
     HOME =  translatePath('special://home')
     dp.create(AddonTitle,"Renaming paths...")
     url = translatePath('special://userdata')
@@ -90,7 +86,6 @@ def FIX_SPECIAL():
 
 
 def skinswap():
-
     skin         =  xbmc.getSkinDir()
     KODIV        =  float(xbmc.getInfoLabel("System.BuildVersion")[:4])
     skinswapped = 0
