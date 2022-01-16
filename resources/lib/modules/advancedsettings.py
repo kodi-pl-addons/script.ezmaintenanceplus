@@ -39,41 +39,7 @@ class AdvancedSettings():
         self.plg_settings = None
         self.adv_settings = None
 
-    def mem_check(self):
-        srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)
-
-        with open(srcfname, "r+") as file_buffer:
-            src = file_buffer.read()
-
-            p = re.compile('<setting id="memorysize" type="integer" label="33188" help="">\n<level>0</level>\n<default>(.+?)</default>')
-
-            try:
-                buffer = '<default>' + p.search(src).group(1) + '</default>'
-            except:
-                buffer = '<default>20971520</default>'
-
-            src = re.sub(buffer, self.optimal_memory(), src)
-            
-            file_buffer.seek(0)
-            file_buffer.write(src)
-            file_buffer.truncate()
-            file_buffer.close()
-
-    def optimal_memory(self):
-        MEM        =  xbmc.getInfoLabel("System.Memory(total)")
-        FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
-
-        BUFFER_F   =  re.sub('[^0-9]','',FREEMEM)
-        BUFFER_F   = int(BUFFER_F) / 3
-        BUFFERSIZE = trunc(BUFFER_F * 1024 * 1024)
-
-        B = '<default>' + str(BUFFERSIZE) + '</default>'
-
-        return B
-
-    def unlock(self):
-        self.mem_check()
-        
+    def unlock(self):        
         srcfname = os.path.join(os.path.join(self.path, "resources"), SRCFNAME)
 
         with open(self.plg_file, "r") as file:
@@ -97,7 +63,8 @@ class AdvancedSettings():
         self._load()
         self.addon.openSettings(self.id)
         
-        ret = self._save(self.addon)
+        ret = self._save(self.addon, self.ads_file)
+
         if ret:
             xbmcgui.Dialog().notification(self.addon.getAddonInfo("name"), self.language(30802), xbmcgui.NOTIFICATION_INFO, 5000)
 
@@ -109,7 +76,7 @@ class AdvancedSettings():
                 setting_id = s.attrib['id']
                 self.addon.setSetting(setting_id, self._read_adv_setting_value(cat, s))
 
-    def _save(self, addon):
+    def _save(self, addon, path):
         if self.adv_settings is None:
             self.adv_settings = ET.fromstring("<advancedsettings version='1.0' />")
 
@@ -127,7 +94,7 @@ class AdvancedSettings():
                     self.adv_settings.remove(adv_cat)
 
         self._backup_file(self.ads_file)
-        ret = self._save_pretty_xml(self.adv_settings, self.ads_file, addon)
+        ret = self._save_pretty_xml(self.adv_settings, self.ads_file, addon, path)
 
         return ret
 
@@ -321,7 +288,7 @@ class AdvancedSettings():
             return None
 
     @staticmethod
-    def _save_pretty_xml(element, output_xml, addon):
+    def _save_pretty_xml(element, output_xml, addon, path):
         try:
             with open(output_xml, "r") as file:
                 read_xml_string = file.read()
@@ -334,12 +301,42 @@ class AdvancedSettings():
         if xml_string == read_xml_string:
             return False
 
+        AdvancedSettings._mem_check(addon, path, output_xml, xml_string)    
+
+    @staticmethod
+    def _mem_check(addon, path, output_xml, xml_string):
+        b_size = None
+
+        MEM        =  xbmc.getInfoLabel("System.Memory(total)")
+        FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
+
+        BUFFER_F   =  re.sub('[^0-9]','',FREEMEM)
+        BUFFER_F   = int(BUFFER_F) / 3
+        BUFFERSIZE = trunc(BUFFER_F * 1024 * 1024)
+
+        B = str(BUFFERSIZE)
+
+        p = re.compile('<memorysize>(.+?)</memorysize>')
+        try:
+            buffer = p.search(xml_string).group(1)
+        except:
+            buffer = '20971520'
+
+        mn = (int(B) - 10000)
+        pl = (int(B) + 10000)
+
+        if not mn <= int(buffer) <= pl:
+            ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), 'Based on your free Memory your optimal buffersize is: \n' + str(BUFFERSIZE) + ' Bytes' + ' ('  + str(round(BUFFER_F)) + ' MB)' '\n' + 'Would you like to apply optimal memorysize or keep your selected setting?', yeslabel='Use Optimal',nolabel='Keep' )
+            if ret:
+                b_size = B
+
         ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))
         if ret:
             with open(output_xml, "w") as file_out:
+                if b_size:
+                    xml_string = re.sub(buffer, b_size, xml_string)
                 file_out.write(xml_string)
                 return True
-
 
     @staticmethod
     def _backup_file(fpath):
