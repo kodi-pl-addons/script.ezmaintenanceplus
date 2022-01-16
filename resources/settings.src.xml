@@ -1569,10 +1569,10 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="memorysize" type="integer" label="33218" help="enum">
+				<setting id="memorysize" type="string" label="33218" help="">
 					<level>0</level>
 					<default>20971520</default>
-					<control type="edit" format="integer">
+					<control type="edit" format="string">
 						<heading>memorysize</heading>
 					</control>
 				</setting>

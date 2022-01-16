@@ -323,8 +323,8 @@ class AdvancedSettings():
             buffer = ''
 
         if buffer != '':
-            mn = (int(B) - 10000)
-            pl = (int(B) + 10000)
+            mn = (int(B) - 100000000)
+            pl = (int(B) + 100000000)
 
             if not mn <= int(buffer) <= pl:
                 ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), 'Based on your free Memory your optimal buffersize is: \n' + str(BUFFERSIZE) + ' Bytes' + ' ('  + str(round(BUFFER_F)) + ' MB)' '\n' + 'Would you like to apply optimal memorysize or keep your selected setting?', yeslabel='Use Optimal',nolabel='Keep' )
