@@ -1154,3 +1154,15 @@ msgstr ""
 msgctxt "#33242"
 msgid "jsonrpc - tcpport"
 msgstr ""
+
+msgctxt "#33243"
+msgid "-1.0"
+msgstr ""
+
+msgctxt "#33244"
+msgid "0.0"
+msgstr ""
+
+msgctxt "#33245"
+msgid "1.0"
+msgstr ""

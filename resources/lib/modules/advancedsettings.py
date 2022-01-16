@@ -247,7 +247,7 @@ class AdvancedSettings():
             if constraints is None:
                 return value
             else:
-                return constraints.attrib['label']
+                return constraints.attrib['label'] if not constraints.attrib['label'] == "none" else ""
         else:
             return value
 
@@ -320,15 +320,16 @@ class AdvancedSettings():
         try:
             buffer = p.search(xml_string).group(1)
         except:
-            buffer = '20971520'
+            buffer = ''
 
-        mn = (int(B) - 10000)
-        pl = (int(B) + 10000)
+        if buffer != '':
+            mn = (int(B) - 10000)
+            pl = (int(B) + 10000)
 
-        if not mn <= int(buffer) <= pl:
-            ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), 'Based on your free Memory your optimal buffersize is: \n' + str(BUFFERSIZE) + ' Bytes' + ' ('  + str(round(BUFFER_F)) + ' MB)' '\n' + 'Would you like to apply optimal memorysize or keep your selected setting?', yeslabel='Use Optimal',nolabel='Keep' )
-            if ret:
-                b_size = B
+            if not mn <= int(buffer) <= pl:
+                ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), 'Based on your free Memory your optimal buffersize is: \n' + str(BUFFERSIZE) + ' Bytes' + ' ('  + str(round(BUFFER_F)) + ' MB)' '\n' + 'Would you like to apply optimal memorysize or keep your selected setting?', yeslabel='Use Optimal',nolabel='Keep' )
+                if ret:
+                    b_size = B
 
         ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))
         if ret:
