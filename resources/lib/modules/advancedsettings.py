@@ -85,6 +85,7 @@ class AdvancedSettings():
 
             xbmc.sleep(1)
             xbmcvfs.copy(srcfname, self.plg_file)
+            xbmc.sleep(1)
 
         self.plg_settings = self._load_xml_from_file(self.plg_file)
         try:
@@ -103,9 +104,8 @@ class AdvancedSettings():
         xbmcvfs.copy(self.plb_file, self.plg_file)
 
     def _load(self):
-
-        for cat in self.plg_settings.findall("category"):
-            for s in cat.findall("setting[@id]"):
+        for cat in self.plg_settings.findall(".//*category"):
+            for s in cat.findall(".//*setting[@id]"):
                 setting_id = s.attrib['id']
                 self.addon.setSetting(setting_id, self._read_adv_setting_value(cat, s))
 
@@ -113,18 +113,18 @@ class AdvancedSettings():
         if self.adv_settings is None:
             self.adv_settings = ET.fromstring("<advancedsettings version='1.0' />")
 
-        for cat in self.plg_settings.findall("category"):
-            for s in cat.findall("setting[@id]"):
-                setting_id = s.attrib['id']
-                value = self.addon.getSetting(setting_id)
+        for cat in self.plg_settings.findall(".//*category"):
+            for group in cat.findall("group"):
+                for s in group.findall("setting[@id]"):
+                    setting_id = s.attrib['id']
+                    value = self.addon.getSetting(setting_id)
 
-                self._save_adv_setting_value(cat, s, value)
+                    self._save_adv_setting_value(cat, s, value)
 
-            # remove empty categories
-            adv_cat = self.adv_settings.find(cat.attrib['id'])
-            
-            if not (adv_cat is None) and len(adv_cat) == 0:
-                self.adv_settings.remove(adv_cat)
+                # remove empty categories
+                adv_cat = self.adv_settings.find(cat.attrib['id'])
+                if not (adv_cat is None) and len(adv_cat) == 0:
+                    self.adv_settings.remove(adv_cat)
 
         self._backup_file(self.ads_file)
         ret = self._save_pretty_xml(self.adv_settings, self.ads_file, addon)
@@ -133,16 +133,18 @@ class AdvancedSettings():
 
     def _save_adv_setting_value(self, cat, s, value):
         xbmc.log("Category %s, setting %s" % (cat.attrib['id'], s.attrib['id']), xbmc.LOGDEBUG)
-        default = s.attrib['default'] if 'default' in s.attrib else ""
 
-        section_tag = cat.attrib['id']
+        default = s.get('default') if 'default' in s.attrib else (s.find("default").text or '')
+
+        section_tag = cat.attrib['id'] # category
         section = self.adv_settings if self._is_root_cat(cat) else self.adv_settings.find(section_tag)
         if section is None:
             section = ET.SubElement(self.adv_settings, section_tag)
 
-        setting_tag = s.attrib['id'].partition("#")[0]
-        setting = self._lookup_element(section, setting_tag)
-        # section.find(setting_tag)
+        setting_tag = s.attrib['id'].partition("#")[0] # id name
+
+        setting = self._lookup_element(section, setting_tag) 
+        #section.find(setting_tag)
 
         if default == value:
             if not (setting is None):
@@ -160,7 +162,6 @@ class AdvancedSettings():
         if setting is None:
             setting = self._create_element(section, setting_tag)
             # ET.SubElement(section, setting_tag)
-
 
         self._write_setting_value(setting, s, self._encode_value(value, s))
 
@@ -188,17 +189,15 @@ class AdvancedSettings():
 
     def _get_gui_setting_value(self, cat, s):
         # setting_id = "%s.%s" % (cat.attrib['id'], s.attrib['id'])
-        default = s.attrib['default'] if 'default' in s.attrib else ""
-        # setting = self.gui_settings.find(".//setting[@id='%s']" % setting_id)
-        #if not (setting is None):
-        #    return setting.text
-        # else:
+        default = s.get('default') if 'default' in s.attrib else (s.find("default").text or '')
+
         return default
 
     def _lookup_element(self, parent, path):
         if parent is None:
             return None
         pathelem = path.split("/")
+
         if len(pathelem) == 1:
             if "$" in path:
                 name_index = path.split("$")
@@ -209,12 +208,11 @@ class AdvancedSettings():
                 else:
                     return None
             else:
-                return parent.find(path)
+                return parent.find(path) 
         else:
             return self._lookup_element(parent.find(pathelem[0]), "/".join(pathelem[1:]))
 
     def _create_element(self, parent, path):
-
         pathelem = path.split("/")
         if len(pathelem) == 1:
             if "$" in path:
@@ -243,10 +241,10 @@ class AdvancedSettings():
             if "$" in pathelem[l-1]:
                 name_index = pathelem[l-1].split("$")
                 index = int(name_index[1])
-                # xbmc.log("Remove teg %s.%s-%s" % (parent.tag, name_index[0], name_index[1]), xbmc.LOGDEBUG)
+                #xbmc.log("Remove teg %s.%s-%s" % (parent.tag, name_index[0], name_index[1]), xbmc.LOGDEBUG)
                 if index < len(parent):
                     del parent[index:]
-                # xbmc.log("new num of children %s" % len(parent), xbmc.LOGDEBUG)
+                #xbmc.log("new num of children %s" % len(parent), xbmc.LOGDEBUG)
             else:
                 parent.remove(elem)
             if len(parent) == 0 and len(parent.attrib) == 0:
@@ -262,27 +260,27 @@ class AdvancedSettings():
 
     @staticmethod
     def _is_root_cat(cat):
-        return 'root' in cat.attrib and cat.attrib['root'] == "true"
+        return 'parent' in cat.attrib and cat.attrib['parent'] == "true"
 
     @staticmethod
-    def _decode_value(value, s):
-        if s.attrib['type'] == "enum":
-            enummap = s.find("enummap[@value='%s']" % value)
-            if enummap is None:
+    def _decode_value(value, s): 
+        if s.attrib['help'] == "enum":
+            constraints = s.find(".//*option")
+            if constraints is None:
                 return value
             else:
-                return enummap.attrib['key']
+                return constraints.text
         else:
             return value
 
     @staticmethod
     def _encode_value(value, s):
-        if s.attrib['type'] == "enum":
-            enummap = s.find("enummap[@key='%s']" % value)
-            if enummap is None:
+        if s.attrib['help'] == "enum":
+            constraints = s.find(".//*option")
+            if constraints is None:
                 return value
             else:
-                return enummap.attrib['value']
+                return constraints.attrib['label']
         else:
             return value
 
@@ -294,7 +292,8 @@ class AdvancedSettings():
             if idc[1] in setting.attrib:
                 return setting.attrib[idc[1]]
             else:
-                return s.attrib['default'] if 'default' in s.attrib else ""
+                default = s.get('default') if 'default' in s.attrib else (s.find("default").text or '')
+                return default
         else:
             return setting.text
 
@@ -332,7 +331,7 @@ class AdvancedSettings():
         xml_string = minidom.parseString(ET.tostring(element)).toprettyxml()
         xml_string = "".join([s for s in xml_string.splitlines(True) if s.strip()])
 
-        if xml_string == read_xml_string or read_xml_string == '':
+        if xml_string == read_xml_string:
             return False
 
         ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))
