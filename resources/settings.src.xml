@@ -966,14 +966,14 @@
 						<heading>itemseparator</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/dateadded" type="integer" label="33075" help="enum">
+				<setting id="musiclibrary/dateadded" type="string" label="33075" help="enum">
 					<level>1</level>
 					<default>1</default>
 					<constraints>
 						<options>
-							<option label="0">0</option>
-							<option label="1">1</option>
-							<option label="2">2</option>
+							<option label="33247">0</option>
+							<option label="33248">1</option>
+							<option label="33249">2</option>
 						</options>
 					</constraints>
 					<control type="spinner" format="string"/>
