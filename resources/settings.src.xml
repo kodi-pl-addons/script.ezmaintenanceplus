@@ -966,7 +966,7 @@
 						<heading>itemseparator</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/dateadded" type="string" label="33075" help="enum">
+				<setting id="musiclibrary/dateadded" type="string" label="33075" help="">
 					<level>1</level>
 					<default>1</default>
 					<constraints>
