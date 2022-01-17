@@ -305,8 +305,6 @@ class AdvancedSettings():
 
     @staticmethod
     def _mem_check(addon, path, output_xml, xml_string):
-        b_size = None
-
         MEM        =  xbmc.getInfoLabel("System.Memory(total)")
         FREEMEM    =  xbmc.getInfoLabel("System.FreeMemory")
 
@@ -316,28 +314,28 @@ class AdvancedSettings():
 
         B = str(BUFFERSIZE)
 
-        p = re.compile('<memorysize>(.+?)</memorysize>')
-        try:
-            buffer = p.search(xml_string).group(1)
-        except:
-            buffer = ''
+        boolean_regex = re.compile('<optimized>true</optimized>')
+        mem_regex = re.compile('<memorysize>\d+</memorysize>')
 
-        if buffer != '':
-            mn = (int(B) - 100000000)
-            pl = (int(B) + 100000000)
+        if not mem_regex.findall(xml_string):
+            if boolean_regex.findall(xml_string):
+                xml_string = re.sub('<optimized>true</optimized>', '<optimized>true</optimized>\n\t\t<memorysize>{0}</memorysize>'.format(B), xml_string)
+                
+            elif not boolean_regex.findall(xml_string):
+                xml_string = re.sub('<memorysize>\d+</memorysize>', '<memorysize>{0}</memorysize>'.format(B), xml_string)
 
-            if not mn <= int(buffer) <= pl:
-                ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), 'Based on your free Memory your optimal buffersize is: \n' + str(BUFFERSIZE) + ' Bytes' + ' ('  + str(round(BUFFER_F)) + ' MB)' '\n' + 'Would you like to apply optimal memorysize or keep your selected setting?', yeslabel='Use Optimal',nolabel='Keep' )
-                if ret:
-                    b_size = B
+        else:
+            if boolean_regex.findall(xml_string):
+                xml_string = re.sub('\n\t\t<memorysize>\d+</memorysize>', '', xml_string)
+                xml_string = re.sub('<optimized>true</optimized>', '<optimized>true</optimized>\n\t\t<memorysize>{0}</memorysize>'.format(B), xml_string)
 
         ret = xbmcgui.Dialog().yesno(addon.getAddonInfo("name"), addon.getLocalizedString(30801))
         if ret:
             with open(output_xml, "w") as file_out:
-                if b_size:
-                    xml_string = re.sub(buffer, b_size, xml_string)
                 file_out.write(xml_string)
                 return True
+        else:
+            return False
 
     @staticmethod
     def _backup_file(fpath):

@@ -1166,3 +1166,7 @@ msgstr ""
 msgctxt "#33245"
 msgid "1.0"
 msgstr ""
+
+msgctxt "#33246"
+msgid "optimize memorysize"
+msgstr ""
