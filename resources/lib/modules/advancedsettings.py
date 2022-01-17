@@ -72,9 +72,10 @@ class AdvancedSettings():
 
     def _load(self):
         for cat in self.plg_settings.findall(".//*category"):
-            for s in cat.findall(".//*setting[@id]"):
-                setting_id = s.attrib['id']
-                self.addon.setSetting(setting_id, self._read_adv_setting_value(cat, s))
+            for group in cat.findall("group"):
+                for s in group.findall("setting[@id]"):
+                    setting_id = s.attrib['id']
+                    self.addon.setSetting(setting_id, self._read_adv_setting_value(cat, s))
 
     def _save(self, addon, path):
         if self.adv_settings is None:
@@ -163,7 +164,11 @@ class AdvancedSettings():
     def _lookup_element(self, parent, path):
         if parent is None:
             return None
+
         pathelem = path.split("/")
+        if parent.tag == pathelem[0]:
+            pathelem[0] = pathelem[1]
+            path = pathelem[1]
 
         if len(pathelem) == 1:
             if "$" in path:

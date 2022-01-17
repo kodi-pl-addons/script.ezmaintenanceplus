@@ -1170,3 +1170,19 @@ msgstr ""
 msgctxt "#33246"
 msgid "optimize memorysize"
 msgstr ""
+
+msgctxt "#33247"
+msgid "0"
+msgstr ""
+
+msgctxt "#33248"
+msgid "1"
+msgstr ""
+
+msgctxt "#33249"
+msgid "2"
+msgstr ""
+
+msgctxt "#33250"
+msgid "3"
+msgstr ""
