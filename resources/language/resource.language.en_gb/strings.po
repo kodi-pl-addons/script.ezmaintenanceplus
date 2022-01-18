@@ -185,8 +185,9 @@ msgid "The file 'advancedsettings.xml' will be overwritten, continue?"
 msgstr "The file 'advancedsettings.xml' will be overwritten, continue?"
 
 msgctxt "#30802"
-msgid "Please restart Kodi for settings to take effect"
-msgstr "Please restart Kodi for settings to take effect"
+msgid "Please restart Kodi for settings to take effect."
+msgstr "Please restart Kodi for settings to take effect."
+
 msgctxt "#33001"
 msgid "Maintenance"
 msgstr ""
@@ -1185,4 +1186,12 @@ msgstr ""
 
 msgctxt "#33250"
 msgid "3"
+msgstr ""
+
+msgctxt "#33251"
+msgid "Package Folder Limits"
+msgstr ""
+
+msgctxt "#33252"
+msgid "Thumbnails Folder Limits"
 msgstr ""
