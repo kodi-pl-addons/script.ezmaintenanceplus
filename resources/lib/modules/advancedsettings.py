@@ -131,7 +131,7 @@ class AdvancedSettings():
             setting = self._create_element(section, setting_tag)
             # ET.SubElement(section, setting_tag)
 
-        self._write_setting_value(setting, s, self._encode_value(value, s))
+        self._write_setting_value(setting, s, value)
 
         xbmcvfs.copy(self.plb_file, self.plg_file)
 
@@ -150,7 +150,7 @@ class AdvancedSettings():
         setting = self._lookup_element(section, s.attrib['id'].partition("#")[0])
         # section.find(s.attrib['id'].partition("#")[0])
         if not (setting is None):
-            return self._decode_value(self._read_setting_value(setting, s), s)
+            return self._read_setting_value(setting, s)
         else:
             xbmc.log("Setting %s not found" % s.attrib['id'], xbmc.LOGDEBUG)
             return self._get_gui_setting_value(cat, s)
@@ -235,28 +235,6 @@ class AdvancedSettings():
         return 'parent' in cat.attrib and cat.attrib['parent'] == "true"
 
     @staticmethod
-    def _decode_value(value, s): 
-        if s.attrib['help'] == "enum":
-            constraints = s.find(".//*option")
-            if constraints is None:
-                return value
-            else:
-                return constraints.text
-        else:
-            return value
-
-    @staticmethod
-    def _encode_value(value, s):
-        if s.attrib['help'] == "enum":
-            constraints = s.find(".//*option")
-            if constraints is None:
-                return value
-            else:
-                return constraints.attrib['label'] if not constraints.attrib['label'] == "none" else ""
-        else:
-            return value
-
-    @staticmethod
     def _read_setting_value(setting, s):
         if "#" in s.attrib['id']:
             idc = s.attrib['id'].split("#")
@@ -306,7 +284,8 @@ class AdvancedSettings():
         if xml_string == read_xml_string:
             return False
 
-        AdvancedSettings._mem_check(addon, path, output_xml, xml_string)    
+        ret = AdvancedSettings._mem_check(addon, path, output_xml, xml_string)
+        return ret
 
     @staticmethod
     def _mem_check(addon, path, output_xml, xml_string):
