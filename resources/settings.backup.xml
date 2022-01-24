@@ -10,11 +10,11 @@
 				</setting>
 				<setting id="startup.cache" type="boolean" label="33003" help="">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
-			<group id="2" label="Package Folder Limits">
+			<group id="2" label="33251">
 				<setting id="filesize_alert" type="integer" label="33004" help="">
 					<level>0</level>
 					<default>200</default>
@@ -38,7 +38,7 @@
 					</control>
 				</setting>
 			</group>
-			<group id="3" label="Thumbnails Folder Limits">
+			<group id="3" label="33252">
 				<setting id="filesizethumb_alert" type="integer" label="33004" help="">
 					<level>0</level>
 					<default>500</default>

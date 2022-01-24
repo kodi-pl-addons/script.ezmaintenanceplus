@@ -10,7 +10,7 @@
 				</setting>
 				<setting id="startup.cache" type="boolean" label="33003" help="">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 			</group>

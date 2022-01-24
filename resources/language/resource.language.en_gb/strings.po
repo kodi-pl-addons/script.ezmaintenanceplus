@@ -853,7 +853,7 @@ msgid "musicdatabase - ciphers"
 msgstr ""
 
 msgctxt "#33167"
-msgid "Photo"
+msgid "Photos"
 msgstr ""
 
 msgctxt "#33168"
@@ -1194,4 +1194,692 @@ msgstr ""
 
 msgctxt "#33252"
 msgid "Thumbnails Folder Limits"
+msgstr ""
+
+msgctxt "#33253"
+msgid "Options specific to the Video."
+msgstr ""
+
+msgctxt "#33254"
+msgid "Delay range for subtitles, in seconds."
+msgstr ""
+
+msgctxt "#33255"
+msgid "Allow further increase of playback speed over the default of 1.5 maxtempo must be in the range of 1.5 to 2.1, Be aware of the limitations of your platform / hardware as not all are capable of the increased maxtempo."
+msgstr ""
+
+msgctxt "#33256"
+msgid "Delay range for audio/video sync, in seconds."
+msgstr ""
+
+msgctxt "#33257"
+msgid "Whether to use time based or percentage based seeking."
+msgstr ""
+
+msgctxt "#33258"
+msgid "Time to seek forward in seconds when doing a long seek. Defaults to 600 (10 minutes) and -600 (-10 minutes) respectively."
+msgstr ""
+
+msgctxt "#33259"
+msgid "Time to seek backwards in seconds when doing a long seek. Defaults to 600 (10 minutes) and -600 (-10 minutes) respectively."
+msgstr ""
+
+msgctxt "#33260"
+msgid "Amount to seek forward as a percentage, when doing a short seek. Defaults to 2 (2%) and -2 (2%) respectively."
+msgstr ""
+
+msgctxt "#33261"
+msgid "Amount to seek backwards as a percentage, when doing a short seek. Defaults to 2 (2%) and -2 (2%) respectively."
+msgstr ""
+
+msgctxt "#33262"
+msgid "Amount to seek forward as a percentage, when doing a long seek. Defaults to 10 (10%) and -10 (10%) respectively."
+msgstr ""
+
+msgctxt "#33263"
+msgid "Amount to seek backwards as a percentage, when doing a long seek. Defaults to 10 (10%) and -10 (10%) respectively."
+msgstr ""
+
+msgctxt "#33264"
+msgid "	Whether to go to fullscreen or not when starting a movie. Defaults to true."
+msgstr ""
+
+msgctxt "#33265"
+msgid "Set the default video player: VideoPlayer or an external player. See External players for more info."
+msgstr ""
+
+msgctxt "#33266"
+msgid "Minimum percentage that has to be played before it is marked as watched. Set to 101 to never auto-mark items as watched."
+msgstr ""
+
+msgctxt "#33267"
+msgid "Number of seconds to ignore at video start after which a resume point is created."
+msgstr ""
+
+msgctxt "#33268"
+msgid "Percentage of video to ignore at the end. If you stop watching the video here no resume point is created. Set to 101 to never save a resume point. The video is already marked as watched at 90%, see above."
+msgstr ""
+
+msgctxt "#33269"
+msgid "Scales with vdpau instead of opengl and turns on its HQ scaler when available, enabling this might slow down rendering and cause framedrops especially on ION systems, this setting requires a vdpau feature set C GPU."
+msgstr ""
+
+msgctxt "#33270"
+msgid "Allow turning on the spline36 and lanczos3 shader (for GL builds)."
+msgstr ""
+
+msgctxt "#33271"
+msgid "Enables high quality video upscaling for Windows."
+msgstr ""
+
+msgctxt "#33272"
+msgid "Override the deinterlacing options passed to libpostproc."
+msgstr ""
+
+msgctxt "#33273"
+msgid "Override the post processing options passed to libpostproc when 'Video post-processing' is activated in GUI Videos-Settings-Playback."
+msgstr ""
+
+msgctxt "#33274"
+msgid "When scaling method is set to auto, bilinear is chosen when the fps is higher than this limit, the default is 30."
+msgstr ""
+
+msgctxt "#33275"
+msgid "FPS - if the fps is between 23.966 and 23.986"
+msgstr ""
+
+msgctxt "#33276"
+msgid "Refresh - switch to the first found refreshrate that is between 59.99 and 60.01"
+msgstr ""
+
+msgctxt "#33277"
+msgid "If none of the overrides match, or none of the refreshrates match any of the fps matching overrides, it will choose a fallback refreshrate. Fallbacks are process in order, if the first fallback doesn't match any refreshrate, it will try the next one until no fallbacks are left."
+msgstr ""
+
+msgctxt "#33278"
+msgid "Advanced setting not present: let Kodi autodetect cards that support H.264 profile > L4.1. Set value to false to enable DXVA no matter what. Set value to true if Kodi doesn't autodetect that the graphics card doesn't support > L4.1."
+msgstr ""
+
+msgctxt "#33279"
+msgid "Use an occlusion query when capturing videoframes, -1 means auto detect, 0 means disabled, 1 means enabled, the default is -1."
+msgstr ""
+
+msgctxt "#33280"
+msgid "FPS detection for video playback.[CR]- 0 = trust codec fps[CR]- 1 = recalculate from video timestamps with uniform spacing[CR]- 2 = recalculate from video timestamps always"
+msgstr ""
+
+msgctxt "#33281"
+msgid "Options specific to the Video Library."
+msgstr ""
+
+msgctxt "#33282"
+msgid "In the recent releases, playlists are treated as folders. Selecting a playlist no longer plays it, but opens it, as if it were a folder.[CR]Set to false to revert to the previous behaviour. When you select a playlist, its content is added to the list of elements to be played."
+msgstr ""
+
+msgctxt "#33283"
+msgid "The number of retries attempted if a source is offline. With this control you can alter the number of consecutive failed items before a playlist fails."
+msgstr ""
+
+msgctxt "#33284"
+msgid "Allows you to specify additional tokens that will be ignored at the start of lines during sorting. Note: Sort tokens are case sensitive."
+msgstr ""
+
+msgctxt "#33285"
+msgid "A list of additional file-extensions to allow (add)."
+msgstr ""
+
+msgctxt "#33286"
+msgid "A list of additional file-extensions to exclude (remove)."
+msgstr ""
+
+msgctxt "#33287"
+msgid "Sorts the "*All" items at the bottom of the list when in Ascending order"
+msgstr ""
+
+msgctxt "#33288"
+msgid "Default set to false to prevent Kodi from removing items from the database while updating."
+msgstr ""
+
+msgctxt "#33289"
+msgid "Defaults to true. Set to false in order to skip hashing based on the folders modification time."
+msgstr ""
+
+msgctxt "#33290"
+msgid "Number of recently added items. Defaults to 25."
+msgstr ""
+
+msgctxt "#33291"
+msgid "Separator used for multiple artists/genres in tags. Note, this is *space* *slash* *space*"
+msgstr ""
+
+msgctxt "#33292"
+msgid "Export auto-generated thumbs. Defaults to false."
+msgstr ""
+
+msgctxt "#33293"
+msgid "Import previously exported playdate and playcount from .nfo files. Defaults to false."
+msgstr ""
+
+msgctxt "#33294"
+msgid "Import previously exported resume point from .nfo files. Defaults to false."
+msgstr ""
+
+msgctxt "#33295"
+msgid "- 0 results in using the current datetime when adding a video[CR]- 1 (default) results in prefering to use the files mtime (if it's valid) and only using the file's ctime if the mtime isn't valid[CR]- 2 results in using the newer datetime of the file's mtime and ctime"
+msgstr ""
+
+msgctxt "#33296"
+msgid "Matches the season and episode numbers in file paths by using a list of Regular Expressions."
+msgstr ""
+
+msgctxt "#33297"
+msgid "foo.s01.e01, foo.s01_e01, S01E02 foo, S01 - E02, S01xE02"
+msgstr ""
+
+msgctxt "#33298"
+msgid "foo.ep01, foo.EP_01"
+msgstr ""
+
+msgctxt "#33299"
+msgid "foo.yyyy.mm.dd.* (byDate=true)"
+msgstr ""
+
+msgctxt "#33300"
+msgid "foo.mm.dd.yyyy.* (byDate=true)"
+msgstr ""
+
+msgctxt "#33301"
+msgid "foo.1x09* or just /1x09*"
+msgstr ""
+
+msgctxt "#33302"
+msgid "foo.103*, 103 foo"
+msgstr ""
+
+msgctxt "#33303"
+msgid "Part I, Pt.VI"
+msgstr ""
+
+msgctxt "#33304"
+msgid "This is used by the file stacking algorithm to combine multi-part files and contains a list of "regular expressions". For stacking videos that are contained in folders, such as VIDEO_TS folders, see <folderstacking>.[CR]As of v9.11, video stacking regular expressions must contain exactly four (4) capture expressions."
+msgstr ""
+
+msgctxt "#33305"
+msgid "<cd/dvd/part/pt/disk/disc> <0-N>"
+msgstr ""
+
+msgctxt "#33306"
+msgid "<cd/dvd/part/pt/disk/disc> <a-d>"
+msgstr ""
+
+msgctxt "#33307"
+msgid "movienamea-xvid.avi, movienameb-xvid.avi"
+msgstr ""
+
+msgctxt "#33308"
+msgid "This is similar to <moviestacking>, but is used for videos that are contained in folders that use the folder names to stack, such as VIDEO_TS folders (DVD rips that are not in ISO format)."
+msgstr ""
+
+msgctxt "#33309"
+msgid "<cd/dvd/disk/disc> <0-N>"
+msgstr ""
+
+msgctxt "#33310"
+msgid "Matches a multipart episode number based on a previously identified episode file, using a list of Regular Expressions."
+msgstr ""
+
+msgctxt "#33311"
+msgid "Contains "Regular Expression" syntax (commonly referred to as "RegEx" or "RegExp") to match the locally stored trailers to movies in the library."
+msgstr ""
+
+msgctxt "#33312"
+msgid "Possible to <add> additional or <remove> existing disc stub extensions to better suit your requirements."
+msgstr ""
+
+msgctxt "#33313"
+msgid "Matches a year number in a string using a Regular Expression."
+msgstr ""
+
+msgctxt "#33314"
+msgid "Matches filenames or folders which should be excluded from a library scan (except tvshows) using a list of Regular Expressions. This can be for both Video or Audio sections of advancedsettings.xml."
+msgstr ""
+
+msgctxt "#33315"
+msgid "Matches filenames or folders which should be excluded from a tvshow library scan using a list of Regular Expressions."
+msgstr ""
+
+msgctxt "#33316"
+msgid "Regular expressions that if evaluated to true won't be displayed in Files View."
+msgstr ""
+
+msgctxt "#33317"
+msgid "Clean unwanted characters from filenames or folders by using a list of Regular Expressions. Please note that everything right of the match (at the end of the file name) is removed, so if you would have a file named Super movie.mp4 and would add <regexp> </regexp> (only a space), the only thing that would be left is Super, which is probably not what you want. - Arguments action="append" or action="prepend" will insert user specified expressions after, or before, the defaults above. (Further details in moviestacking section)."
+msgstr ""
+
+msgctxt "#33318"
+msgid "Input Regular Expressions."
+msgstr ""
+
+msgctxt "#33319"
+msgid "Required - Can be either "sqlite3" or "mysql" (default: sqlite3)"
+msgstr ""
+
+msgctxt "#33320"
+msgid "Required - sqlite3: defines the relative path to the database file (eg. /usr/local/kodi/databases)[CR] - mysql: defines the host of the mysql socket (eg. localhost, 192.168.0.1, etc)"
+msgstr ""
+
+msgctxt "#33321"
+msgid "Optional - sqlite3: silently ignored[CR] - mysql: defines the port of the mysql socket (default: 3306)"
+msgstr ""
+
+msgctxt "#33322"
+msgid "Optional - by default "MyVideos"+DB number will be used.[CR] - sqlite3: defines the name of the database file to read from, excluding the ".db" extension.[CR]- mysql: defines the name of the database to use"
+msgstr ""
+
+msgctxt "#33323"
+msgid "Required for MySQL - sqlite3: silently ignored[CR]- mysql: defines the user with privileged access to the database"
+msgstr ""
+
+msgctxt "#33324"
+msgid "Required for MySQL - sqlite3: silently ignored[CR]- mysql: defines the password for the user with privileged access to the database"
+msgstr ""
+
+msgctxt "#33325"
+msgid "Optional - Defaults to false. Set to "true" to enable MySQL compression protocol. Performance benefit is going to be largely dependent on the network bandwidth, latency between database and clients and on the size of the result sets. [1][CR]Note: Slower clients (such as the RPi and others) won't benefit from it as the zlib de-compression overhead is higher than the actual compression savings"
+msgstr ""
+
+msgctxt "#33326"
+msgid "Optional - SSL setting for MySQL."
+msgstr ""
+
+msgctxt "#33327"
+msgid "Amount of headroom Kodi should use above the maximum volume level, in decibels.  Defaults to 0, valid values 0, 6, 12."
+msgstr ""
+
+msgctxt "#33328"
+msgid "Default audio player: paplayer or videoplayer"
+msgstr ""
+
+msgctxt "#33329"
+msgid "Amount of gain (dB) to be applied to AC3 streams that have been mixed-down to 2 channels. Default is 12.0. Valid values are: -96.0 to 96.0."
+msgstr ""
+
+msgctxt "#33330"
+msgid "Whether to use time based or percentage based seeking."
+msgstr ""
+
+msgctxt "#33331"
+msgid "Time to seek forward in seconds when doing a long seek.  Defaults to 600 (10 minutes) and -600 (-10 minutes) respectively."
+msgstr ""
+
+msgctxt "#33332"
+msgid "Time to seek backward in seconds when doing a long seek back.  Defaults to 600 (10 minutes) and -600 (-10 minutes) respectively."
+msgstr ""
+
+msgctxt "#33333"
+msgid "Minimum percentage that has to be played before it is considered for incrementing in the Top 100 database view, or for last.fm submittal."
+msgstr ""
+
+msgctxt "#33334"
+msgid "Whether to use Dynamic Range Compression (DRC) on AC3 streams. 1.0 is "full" compression, as defined by the audio track's metadata, which is recommended for "basic" sound systems such as the internal speakers on a TV. 0.0 is no compression at all, which is recommended for people with nice multi-speaker sound systems. -1.0 (default) defaults to whatever ffmpeg uses, which is currently the same as 1.0. This has no effect if passthrough is enabled for AC3."
+msgstr ""
+
+msgctxt "#33335"
+msgid "Default values for limiter/compressor."
+msgstr ""
+
+msgctxt "#33336"
+msgid "Options specific to the Music Library."
+msgstr ""
+
+msgctxt "#33337"
+msgid "Regular expressions that if evaluated to true won't be added to library. It is possible to add multiple <regexp> tags to match multiple patterns."
+msgstr ""
+
+msgctxt "#33338"
+msgid "Regular expressions that if evaluated to true won't be displayed in Files View."
+msgstr ""
+
+msgctxt "#33339"
+msgid "It is possible to add or remove extensions for Music, using the following XML tags. Useful if you keep, say, FLAC and mp3 versions of music in the same folder. The <remove> tag can be used to remove mp3 from being listed in the library, leaving only the higher quality FLAC being displayed."
+msgstr ""
+
+msgctxt "#33340"
+msgid "The address of the online CDDb database. You may set this to another freedb mirror if there is a more suitable one."
+msgstr ""
+
+msgctxt "#33341"
+msgid "This controls how long the song information will remain onscreen when the song changes during visualisations. The valid range is "1" to "Indefinite (0)", in seconds. This does not include the duration of any transition effects."
+msgstr ""
+
+msgctxt "#33342"
+msgid "Sorts the "*All" items at the bottom of the list when in Ascending order."
+msgstr ""
+
+msgctxt "#33343"
+msgid "Default set to false to prevent Kodi from removing items from the database while updating."
+msgstr ""
+
+msgctxt "#33344"
+msgid "Number of recently added items. Defaults to 25."
+msgstr ""
+
+msgctxt "#33345"
+msgid "Album label template, default is "%B""
+msgstr ""
+
+msgctxt "#33346"
+msgid "Prioritise APEv2 tags over ID3v1/2 tags, default is false."
+msgstr ""
+
+msgctxt "#33347"
+msgid "Separator used for multiple artists/genres in tags. Note, this is *space* *slash* *space*"
+msgstr ""
+
+msgctxt "#33348"
+msgid "- 0 results in using the current datetime when adding a song[CR]- 1 (default) results in prefering to use the files mtime (if it's valid) and only using the file's ctime if the mtime isn't valid[CR]- 2 results in using the newer datetime of the file's mtime and ctime"
+msgstr ""
+
+msgctxt "#33349"
+msgid "When "true" all dates displayed in the music library will be in ISO 8601 format (YYYY-MM-DD or part thereof). Defaults to "false" (use localized dates)."
+msgstr ""
+
+msgctxt "#33350"
+msgid "Contains filters to match music information (artist, title etc.) from a tag-less music filename. The first <filter> to match completely is used. Matched items include: %A - Artist[CR] %T - Title[CR] %B - Album[CR] %N - Track number[CR] %S - Part of set (disk number)[CR] %D - Duration[CR] %G - Genre[CR] %Y - Year[CR] %R - Rating[CR]"
+msgstr ""
+
+msgctxt "#33351"
+msgid "Options specific to the Photos."
+msgstr ""
+
+msgctxt "#33352"
+msgid "A list of additional file-extensions to allow (add) or exclude (remove) in the My Pictures window."
+msgstr ""
+
+msgctxt "#33353"
+msgid "Matches filenames or folders which should be excluded from being displayed in My Pictures using a list of Regular Expressions"
+msgstr ""
+
+msgctxt "#33354"
+msgid "Amount to pan images as a percentage of the screen."
+msgstr ""
+
+msgctxt "#33355"
+msgid "Amount to zoom images as a percentage of the screen."
+msgstr ""
+
+msgctxt "#33356"
+msgid "Results in cropping of the longer length of the image in order to reduce the black bars on the shorter length of the image. Defaults to 20."
+msgstr ""
+
+msgctxt "#33357"
+msgid "Options specific to the Network."
+msgstr ""
+
+msgctxt "#33358"
+msgid "Enable extraction of flag and thumb for ftp."
+msgstr ""
+
+msgctxt "#33359"
+msgid "Code page to use for filenames."
+msgstr ""
+
+msgctxt "#33360"
+msgid "Timeout (in seconds)."
+msgstr ""
+
+msgctxt "#33361"
+msgid "Set to false to disable smb stat() on files to speed up listings of large directories (over slow links)."
+msgstr ""
+
+msgctxt "#33362"
+msgid "Static dns entries which take precedence over your dns server."
+msgstr ""
+
+msgctxt "#33363"
+msgid "Hostname"
+msgstr ""
+
+msgctxt "#33364"
+msgid "Timeout in seconds for libcurl (http/ftp) connections."
+msgstr ""
+
+msgctxt "#33365"
+msgid "Time in seconds for libcurl to consider a connection lowspeed."
+msgstr ""
+
+msgctxt "#33366"
+msgid "Amount of retries for certain failed libcurl operations (e.g. timeout)."
+msgstr ""
+
+msgctxt "#33367"
+msgid "Username for Basic Proxy Authentication."
+msgstr ""
+
+msgctxt "#33368"
+msgid "Password for Basic Proxy Authentication."
+msgstr ""
+
+msgctxt "#33369"
+msgid "Certain hardware/OS combinations have trouble with ipv6. Set "true" to disable."
+msgstr ""
+
+msgctxt "#33370"
+msgid "Allows disabling HTTP2 for broken Curl / HTTP2 servers."
+msgstr ""
+
+msgctxt "#33371"
+msgid "Timeout in seconds for NFS access, 0 = wait forever (previous behaviour) default is 5s."
+msgstr ""
+
+msgctxt "#33372"
+msgid "Allows specifying a custom SSL CA trust store bundle. e.g. special://masterprofile/cacerts.pem"
+msgstr ""
+
+msgctxt "#33373"
+msgid "Options specific to the EPG."
+msgstr ""
+
+msgctxt "#33374"
+msgid "Check every X seconds, if EPG data need to be updated. This does not mean that every X seconds an EPG update is actually triggered, it's just the interval how often to check whether an update should be triggered. If this value is greater than GUI setting 'epg.epgupdate' value, then EPG updates will done with the value specified for 'updatecheckinterval', effectively overriding the GUI setting's value."
+msgstr ""
+
+msgctxt "#33375"
+msgid "If a TV channel has no EPG data, try to obtain data for that channel every X seconds. This overrides the GUI setting 'epg.epgupdate' value, but only for channels without EPG data. If this value is less than 'updatecheckinterval' value, then data update will be done with the interval specified by 'updatecheckinterval'. Example 1: epg.epgupdate = 120 (minutes!), updatecheckinterval = 300, updateemptytagsinterval = 60 => trigger an EPG update for every channel without EPG data every 5 minutes and trigger an EPG update for every channel with EPG data every 2 hours. Example 2: epg.epgupdate = 120 (minutes!), updatecheckinterval = 300, updateemptytagsinterval = 3600 => trigger an EPG update for every channel without EPG data every 2 hours and trigger an EPG update for every channel with EPG data every 1 hour."
+msgstr ""
+
+msgctxt "#33376"
+msgid "Remove old entries from the EPG every X seconds."
+msgstr ""
+
+msgctxt "#33377"
+msgid "Check for updated active tags every X seconds."
+msgstr ""
+
+msgctxt "#33378"
+msgid "Retry an interrupted EPG update after X seconds."
+msgstr ""
+
+msgctxt "#33379"
+msgid "Display a progress popup while updating EPG data from clients."
+msgstr ""
+
+msgctxt "#33380"
+msgid "Display a progress popup while doing incremental EPG updates"
+msgstr ""
+
+msgctxt "#33381"
+msgid "Settings available for commercial break detection."
+msgstr ""
+
+msgctxt "#33382"
+msgid "If true, commercial breaks will be merged according to the remaining options."
+msgstr ""
+
+msgctxt "#33383"
+msgid "Commercial breaks won't be merged if the total length of the commercial break would be greater than this (seconds)."
+msgstr ""
+
+msgctxt "#33384"
+msgid "After merging, commercial breaks shorter than this will be removed (seconds)."
+msgstr ""
+
+msgctxt "#33385"
+msgid "Commercial breaks that are further apart than this won't be merged (seconds)."
+msgstr ""
+
+msgctxt "#33386"
+msgid "How long to wait before automatically skipping when the start of a commercial break reached (seconds). Possible values: from -60 to 60."
+msgstr ""
+
+msgctxt "#33387"
+msgid "How long to rewind after automatically skipping to the end of the commercial break (seconds). Possible values: from -60 to 60."
+msgstr ""
+
+msgctxt "#33388"
+msgid "Settings available for PVR, EPG and Live TV."
+msgstr ""
+
+msgctxt "#33389"
+msgid "Correct all times (epg tags, timer tags, recording tags) by this amount of minutes."
+msgstr ""
+
+msgctxt "#33390"
+msgid "If there is more than one pvr gui info item available (e.g. multiple recordings active at the same time), use this toggle delay in milliseconds."
+msgstr ""
+
+msgctxt "#33391"
+msgid "Automatically scan user defined folder for channel icons when loading internal channel groups."
+msgstr ""
+
+msgctxt "#33392"
+msgid "Mark channel icons populated by auto scan as "user set"."
+msgstr ""
+
+msgctxt "#33393"
+msgid "Time in ms before the numeric dialog auto closes when confirmchannelswitch is disabled."
+msgstr ""
+
+msgctxt "#33394"
+msgid "- 1 Name[CR]- 2 Date[CR]- 3 Size[CR]- 4 File"
+msgstr ""
+
+msgctxt "#33395"
+msgid "- 1 Ascending[CR]- 2 Descending"
+msgstr ""
+
+msgctxt "#33396"
+msgid "Options specific to the Cache."
+msgstr ""
+
+msgctxt "#33397"
+msgid "Choose what to buffer:[CR] - 0 Buffer all internet filesystems (like "2" but additionally also ftp, webdav, etc.)[CR] - 1 Buffer all filesystems (including local) (default since Kodi 19)[CR] - 2 Only buffer true internet filesystems (streams) (http, https, etc.)[CR]- 3 No buffer[CR]- 4 Buffer all network filesystems (incl. smb, nfs, etc.)"
+msgstr ""
+
+msgctxt "#33398"
+msgid "Let system calculate bytes used for buffering streams in memory."
+msgstr ""
+
+msgctxt "#33399"
+msgid "Number of bytes used for buffering streams in memory when set to 0 the cache will be written to disk instead of RAM."
+msgstr ""
+
+msgctxt "#33400"
+msgid "This factor determines the max readrate in terms of readfactor * avg bitrate of a video file. This can help on bad connections to keep the cache filled. It will also greatly speed up buffering. Default value 4.0."
+msgstr ""
+
+msgctxt "#33401"
+msgid "Options specific to the System."
+msgstr ""
+
+msgctxt "#33402"
+msgid "Sets the logging level used to log errors and information."
+msgstr ""
+
+msgctxt "#33403"
+msgid "Hides the "enable debugging" setting in the Settings page. The "hide" attribute is optional."
+msgstr ""
+
+msgctxt "#33404"
+msgid "The amount of the loop filter to skip on h.264 decoding. This can help the performance of slower machines when decoding h264 content. Values, in decreasing CPU usage (and decreasing quality)."
+msgstr ""
+
+msgctxt "#33405"
+msgid "Use to force a backbuffer->frontbuffer swap while vsync is enabled. Set to the time (in ms) to allow for the swap (e.g. <forcedswaptime>1</forcedswaptime> is typical)."
+msgstr ""
+
+msgctxt "#33406"
+msgid "Set to true to silently ignore errors while scanning videos. This prevents the error dialogue box, so you don't have to keep hitting "yes" to keep scanning."
+msgstr ""
+
+msgctxt "#33407"
+msgid "The repeat delay for a LIRC remote control. A delay value between 1 and 20 before a remote button starts repeating on a long keypress (i.e. continuously sending button pushes while it's held down)."
+msgstr ""
+
+msgctxt "#33408"
+msgid "This setting only has any effect on Windows versions of Kodi, and only applies to builds from 28th May 2011 onwards. In Windows the multimedia keys generate a WM_APPCOMMAND message in addition the keypress. Kodi processes both keypresses and the WM_APPCOMMAND messages, and the end result would be that the command is executed twice. To avoid this, by default multimedia keypresses are disabled. Although it should rarely be necessary, the enablemultimediakeys setting allows you to enable the multimedia keys."
+msgstr ""
+
+msgctxt "#33409"
+msgid "Introduced in v18 and used in MS Windows setups only. Used to disable the regular connection attempts to the IR Server Suite when there is no remote to connect to. The default setting is to allow connection attempts. To disable connection attempts change value to false."
+msgstr ""
+
+msgctxt "#33410"
+msgid "Windows only. A bitmask to prevent Kodi from using detected texture capabilities of the GPU. This helps work around buggy hardware/drivers. 1: prevent the use of compressed textures (DXT1, DXT3, DXT5) 2: prevent the use of non-power-of-two dimensions for textures 4: prevent the use of compressed textures with non-power-of-two dimensions."
+msgstr ""
+
+msgctxt "#33411"
+msgid "Enable dirty-region processing. Dirty regions are any parts of the screen that have changed since the last frame. By not re-rendering what hasn't changed the GUI can be sped up. Because all GPUs work differently, only Mode 3 is guaranteed to work for everyone without flickering issues. This mode will reduce CPU/GPU usage, but will not increase GUI speed. Note: Some GPU/hardware configurations will have some minor issues (such as a visual "flicker"). For those situations try mode 2 or use the default (mode 3, which requires no advancedsetting). Almost all ARM-based devices (such as Android) willl likely have flickering issues."
+msgstr ""
+
+msgctxt "#33412"
+msgid "Enable dirty-region visualization. Paints a rectangle over marked controls. Note: This is only a development mode and isn't of use to normal users."
+msgstr ""
+
+msgctxt "#33413"
+msgid "This new feature was introduced in Kodi 18 and if enabled, the GUI process call (and therefore the render call) is only done if anything has changed. The result will be a faster GUI and less load if Kodi plays a video. Note: This is an experimental feature and you might face issues using it. So please be aware of that."
+msgstr ""
+
+msgctxt "#33414"
+msgid "Setting to hide the exit button, useful for people running appliance based setups where exit would only confuse/complicate the user. Modifiable via the advancedsettings.xml by setting showexitbutton to false, default is true (show)."
+msgstr ""
+
+msgctxt "#33415"
+msgid "Starts Kodi in full screen (check resolutions!)."
+msgstr ""
+
+msgctxt "#33416"
+msgid "Set to false if you wish to disable the startup splash image. Defaults to true."
+msgstr ""
+
+msgctxt "#33417"
+msgid "Provide a shell command Kodi will use to get CPU temperature. It should print out only "[temp as integer] [scale as one of "CcFf"]"."
+msgstr ""
+
+msgctxt "#33418"
+msgid "Provide a shell command Kodi will use to get GPU temperature. It should print out only "[temp as integer] [scale as one of "CcFf"]"."
+msgstr ""
+
+msgctxt "#33419"
+msgid "Problems with ghosting or videos which are only played back in the left upper quarter? The following ATI hack may solve it."
+msgstr ""
+
+msgctxt "#33420"
+msgid "Added in XBMC v9.11 (Windows OS only). Keeps Kodi always on top when windowed."
+msgstr ""
+
+msgctxt "#33421"
+msgid "Windows only. Minimizes Kodi to the system tray. Defaults to false. Note: Available in Kodi v20 and above."
+msgstr ""
+
+msgctxt "#33422"
+msgid "To make it easier for developers using the JSON-RPC_API API in their (third party) applications to debug during development the json output of Kodi can be prettified by setting compactoutput to false. Default json output mode is a compact print which does not contain any unnecessary whitespaces and therefore is difficult to read for humans."
+msgstr ""
+
+msgctxt "#33423"
+msgid "Using the tcpport setting it is possible to change the default TCP port used by Kodi for JSON RPC (which is 9090) to any other valid port."
+msgstr ""
+
+msgctxt "#33424"
+msgid "Options specific to the Audio."
 msgstr ""

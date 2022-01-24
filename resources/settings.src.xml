@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <settings version="1">
 	<section id="script.ezmaintenanceplus">
-		<category id="video" label="33031" help="">
+		<category id="video" label="33031" help="33253">
 			<group id="1">
-				<setting id="subsdelayrange" type="integer" label="33032" help="">
+				<setting id="subsdelayrange" type="integer" label="33032" help="33254">
 					<level>1</level>
 					<default>10</default>
 					<control type="edit" format="integer">
 						<heading>subsdelayrange</heading>
 					</control>
 				</setting>
-				<setting id="maxtempo" type="number" label="33033" help="">
+				<setting id="maxtempo" type="number" label="33033" help="33255">
 					<level>1</level>
 					<default>1.5</default>
 					<constraints>
@@ -22,109 +22,109 @@
 						<popup>false</popup>
 					</control>
 				</setting>
-				<setting id="audiodelayrange" type="integer" label="33034" help="">
+				<setting id="audiodelayrange" type="integer" label="33034" help="33256">
 					<level>1</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>audiodelayrange</heading>
 					</control>
 				</setting>
-				<setting id="usetimeseeking" type="boolean" label="33035" help="">
+				<setting id="usetimeseeking" type="boolean" label="33035" help="33257">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="timeseekforwardbig" type="integer" label="33036" help="">
+				<setting id="timeseekforwardbig" type="integer" label="33036" help="33258">
 					<level>1</level>
 					<default>600</default>
 					<control type="edit" format="integer">
 						<heading>timeseekforwardbig</heading>
 					</control>
 				</setting>
-				<setting id="timeseekbackwardbig" type="integer" label="33037" help="">
+				<setting id="timeseekbackwardbig" type="integer" label="33037" help="33259">
 					<level>1</level>
 					<default>-600</default>
 					<control type="edit" format="integer">
 						<heading>timeseekbackwardbig</heading>
 					</control>
 				</setting>
-				<setting id="percentseekforward" type="integer" label="33038" help="">
+				<setting id="percentseekforward" type="integer" label="33038" help="33260">
 					<level>1</level>
 					<default>2</default>
 					<control type="edit" format="integer">
 						<heading>percentseekforward</heading>
 					</control>
 				</setting>
-				<setting id="percentseekbackward" type="integer" label="33039" help="">
+				<setting id="percentseekbackward" type="integer" label="33039" help="33261">
 					<level>1</level>
 					<default>-2</default>
 					<control type="edit" format="integer">
 						<heading>percentseekbackward</heading>
 					</control>
 				</setting>
-				<setting id="percentseekforwardbig" type="integer" label="33040" help="">
+				<setting id="percentseekforwardbig" type="integer" label="33040" help="33262">
 					<level>1</level>
 					<default>10</default>
 					<control type="edit" format="integer">
 						<heading>percentseekforwardbig</heading>
 					</control>
 				</setting>
-				<setting id="percentseekbackwardbig" type="integer" label="33041" help="">
+				<setting id="percentseekbackwardbig" type="integer" label="33041" help="33263">
 					<level>1</level>
 					<default>-10</default>
 					<control type="edit" format="integer">
 						<heading>percentseekbackwardbig</heading>
 					</control>
 				</setting>
-				<setting id="fullscreenonmoviestart" type="boolean" label="33042" help="">
+				<setting id="fullscreenonmoviestart" type="boolean" label="33042" help="33264">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="defaultplayer" type="string" label="33043" help="">
+				<setting id="defaultplayer" type="string" label="33043" help="33265">
 					<level>1</level>
 					<default>VideoPlayer</default>
 					<control type="edit" format="string">
 						<heading>defaultplayer</heading>
 					</control>
 				</setting>
-				<setting id="playcountminimumpercent" type="integer" label="33044" help="">
+				<setting id="playcountminimumpercent" type="integer" label="33044" help="33266">
 					<level>1</level>
 					<default>90</default>
 					<control type="edit" format="integer">
 						<heading>playcountminimumpercent</heading>
 					</control>
 				</setting>
-				<setting id="ignoresecondsatstart" type="integer" label="33045" help="">
+				<setting id="ignoresecondsatstart" type="integer" label="33045" help="33267">
 					<level>1</level>
 					<default>180</default>
 					<control type="edit" format="integer">
 						<heading>ignoresecondsatstart</heading>
 					</control>
 				</setting>
-				<setting id="ignorepercentatend" type="integer" label="33046" help="">
+				<setting id="ignorepercentatend" type="integer" label="33046" help="33268">
 					<level>1</level>
 					<default>8</default>
 					<control type="edit" format="integer">
 						<heading>ignorepercentatend</heading>
 					</control>
 				</setting>
-				<setting id="vdpauscaling" type="boolean" label="33047" help="">
+				<setting id="vdpauscaling" type="boolean" label="33047" help="33269">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="enablehighqualityhwscalers" type="boolean" label="33048" help="">
+				<setting id="enablehighqualityhwscalers" type="boolean" label="33048" help="33270">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="dxvaallowhqscaling" type="boolean" label="33049" help="">
+				<setting id="dxvaallowhqscaling" type="boolean" label="33049" help="33271">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="ppffmpegdeinterlacing" type="string" label="33050" help="">
+				<setting id="ppffmpegdeinterlacing" type="string" label="33050" help="33272">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -134,7 +134,7 @@
 						<heading>ppffmpegdeinterlacing</heading>
 					</control>
 				</setting>
-				<setting id="ppffmpegpostprocessing" type="string" label="33051" help="">
+				<setting id="ppffmpegpostprocessing" type="string" label="33051" help="33273">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -144,7 +144,7 @@
 						<heading>ppffmpegpostprocessing</heading>
 					</control>
 				</setting>
-				<setting id="autoscalemaxfps" type="integer" label="33052" help="">
+				<setting id="autoscalemaxfps" type="integer" label="33052" help="33274">
 					<level>1</level>
 					<default>30</default>
 					<control type="edit" format="integer">
@@ -153,8 +153,8 @@
 				</setting>
 			</group>
 			<group id="2">
-				<setting id="adjustrefreshrate/override/fps" type="number" label="33053" help="">
-					<level>1</level>
+				<setting id="adjustrefreshrate/override/fps" type="number" label="33053" help="33275">
+					<level>2</level>
 					<default>23.976</default>
 					<constraints>
 						<minimum>23.966</minimum>
@@ -165,8 +165,8 @@
 						<popup>false</popup>
 					</control>
 				</setting>
-				<setting id="adjustrefreshrate/override/refresh" type="integer" label="33054" help="">
-					<level>1</level>
+				<setting id="adjustrefreshrate/override/refresh" type="integer" label="33054" help="33276">
+					<level>2</level>
 					<default>60</default>
 					<control type="edit" format="integer">
 						<heading>override - refresh</heading>
@@ -174,8 +174,8 @@
 				</setting>
 			</group>
 			<group id="3">
-				<setting id="adjustrefreshrate/fallback/refresh" type="integer" label="33055" help="">
-					<level>1</level>
+				<setting id="adjustrefreshrate/fallback/refresh" type="integer" label="33055" help="33277">
+					<level>2</level>
 					<default>50</default>
 					<control type="edit" format="integer">
 						<heading>fallback - refresh</heading>
@@ -183,20 +183,20 @@
 				</setting>
 			</group>
 			<group id="4">
-				<setting id="checkdxvacompatibility" type="boolean" label="33056" help="">
-					<level>1</level>
+				<setting id="checkdxvacompatibility" type="boolean" label="33056" help="33278">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="useocclusionquery" type="integer" label="33057" help="">
-					<level>1</level>
+				<setting id="useocclusionquery" type="integer" label="33057" help="33279">
+					<level>2</level>
 					<default>-1</default>
 					<control type="edit" format="integer">
 						<heading>useocclusionquery</heading>
 					</control>
 				</setting>
-				<setting id="fpsdetect" type="integer" label="33058" help="">
-					<level>1</level>
+				<setting id="fpsdetect" type="integer" label="33058" help="33280">
+					<level>2</level>
 					<default>1</default>
 					<control type="edit" format="integer">
 						<heading>fpsdetect</heading>
@@ -204,9 +204,9 @@
 				</setting>
 			</group>
 		</category>
-		<category id="videolibrary" label="33059" help="" parent="true">
+		<category id="videolibrary" label="33059" help="33281" parent="true">
 			<group id="1">
-				<setting id="playlistasfolders" type="boolean" label="33060" help="">
+				<setting id="playlistasfolders" type="boolean" label="33060" help="33282">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
@@ -218,15 +218,15 @@
 						<heading>playlistretries</heading>
 					</control>
 				</setting>
-				<setting id="playlisttimeout" type="integer" label="33062" help="">
+				<setting id="playlisttimeout" type="integer" label="33062" help="33283">
 					<level>1</level>
 					<default>20</default>
 					<control type="edit" format="integer">
 						<heading>playlisttimeout</heading>
 					</control>
 				</setting>
-				<setting id="sorttokens/token" type="string" label="33063" help="">
-					<level>1</level>
+				<setting id="sorttokens/token" type="string" label="33063" help="33284">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -235,8 +235,8 @@
 						<heading>sorttokens - token</heading>
 					</control>
 				</setting>
-				<setting id="sorttokens/token#separators" type="string" label="33064" help="">
-					<level>1</level>
+				<setting id="sorttokens/token#separators" type="string" label="33064" help="33284">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -247,8 +247,8 @@
 				</setting>
 			</group>
 			<group id="2">
-				<setting id="videoextensions/add" type="string" label="33065" help="">
-					<level>1</level>
+				<setting id="videoextensions/add" type="string" label="33065" help="33285">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -257,8 +257,8 @@
 						<heading>videoextensions - add</heading>
 					</control>
 				</setting>
-				<setting id="videoextensions/remove" type="string" label="33066" help="">
-					<level>1</level>
+				<setting id="videoextensions/remove" type="string" label="33066" help="33286">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -269,52 +269,52 @@
 				</setting>
 			</group>
 			<group id="3">
-				<setting id="videolibrary/allitemsonbottom" type="boolean" label="33067" help="">
-					<level>1</level>
+				<setting id="videolibrary/allitemsonbottom" type="boolean" label="33067" help="33287">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/cleanonupdate" type="boolean" label="33068" help="">
-					<level>1</level>
+				<setting id="videolibrary/cleanonupdate" type="boolean" label="33068" help="33288">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/usefasthash" type="boolean" label="33069" help="">
-					<level>1</level>
+				<setting id="videolibrary/usefasthash" type="boolean" label="33069" help="33289">
+					<level>2</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/recentlyaddeditems" type="integer" label="33070" help="">
-					<level>1</level>
+				<setting id="videolibrary/recentlyaddeditems" type="integer" label="33070" help="33290">
+					<level>2</level>
 					<default>25</default>
 					<control type="edit" format="integer">
 						<heading>recentlyaddeditems</heading>
 					</control>
 				</setting>
-				<setting id="videolibrary/itemseparator" type="string" label="33071" help="">
-					<level>1</level>
+				<setting id="videolibrary/itemseparator" type="string" label="33071" help="33291">
+					<level>2</level>
 					<default> / </default>
 					<control type="edit" format="string">
 						<heading>itemseparator</heading>
 					</control>
 				</setting>
-				<setting id="videolibrary/exportautothumbs" type="boolean" label="33072" help="">
-					<level>1</level>
+				<setting id="videolibrary/exportautothumbs" type="boolean" label="33072" help="33292">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/importwatchedstate" type="boolean" label="33073" help="">
-					<level>1</level>
+				<setting id="videolibrary/importwatchedstate" type="boolean" label="33073" help="33293">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/importresumepoint" type="boolean" label="33074" help="">
-					<level>1</level>
+				<setting id="videolibrary/importresumepoint" type="boolean" label="33074" help="33294">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videolibrary/dateadded" type="string" label="33075" help="">
-					<level>1</level>
+				<setting id="videolibrary/dateadded" type="string" label="33075" help="33295">
+					<level>2</level>
 					<default>1</default>
 					<constraints>
 						<options>
@@ -327,8 +327,8 @@
 				</setting>
 			</group>
 			<group id="4">
-				<setting id="tvshowmatching#action" type="string" label="33076" help="">
-					<level>1</level>
+				<setting id="tvshowmatching#action" type="string" label="33076" help="33296">
+					<level>3</level>
 					<default>none</default>
 					<constraints>
 						<options>
@@ -339,8 +339,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="tvshowmatching/regexp$0" type="string" label="33077" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$0" type="string" label="33077" help="33297">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -349,8 +349,8 @@
 						<heading>1.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$1" type="string" label="33078" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$1" type="string" label="33078" help="33298">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -359,8 +359,8 @@
 						<heading>2.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$2" type="string" label="33079" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$2" type="string" label="33079" help="33299">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -369,8 +369,8 @@
 						<heading>3.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$3" type="string" label="33080" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$3" type="string" label="33080" help="33300">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -379,8 +379,8 @@
 						<heading>4.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$4" type="string" label="33081" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$4" type="string" label="33081" help="33301">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -389,8 +389,8 @@
 						<heading>5.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$5" type="string" label="33082" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$5" type="string" label="33082" help="33302">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -399,8 +399,8 @@
 						<heading>6.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$6" type="string" label="33083" help="">
-					<level>1</level>
+				<setting id="tvshowmatching/regexp$6" type="string" label="33083" help="33303">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -409,20 +409,10 @@
 						<heading>7.</heading>
 					</control>
 				</setting>
-				<setting id="tvshowmatching/regexp$7" type="string" label="33084" help="">
-					<level>1</level>
-					<default></default>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control type="edit" format="string">
-						<heading>8.</heading>
-					</control>
-				</setting>
 			</group>
 			<group id="5">
-				<setting id="moviestacking#action" type="string" label="33085" help="">
-					<level>1</level>
+				<setting id="moviestacking#action" type="string" label="33085" help="33304">
+					<level>3</level>
 					<default>none</default>
 					<constraints>
 						<options>
@@ -433,8 +423,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="moviestacking/regexp$0" type="string" label="33077" help="">
-					<level>1</level>
+				<setting id="moviestacking/regexp$0" type="string" label="33077" help="33305">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -443,8 +433,8 @@
 						<heading>1.</heading>
 					</control>
 				</setting>
-				<setting id="moviestacking/regexp$1" type="string" label="33078" help="">
-					<level>1</level>
+				<setting id="moviestacking/regexp$1" type="string" label="33078" help="33306">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -453,30 +443,20 @@
 						<heading>2.</heading>
 					</control>
 				</setting>
-				<setting id="moviestacking/regexp$2" type="string" label="33079" help="">
-					<level>1</level>
+				<setting id="moviestacking/regexp$2" type="string" label="33079" help="33307">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
 					<control type="edit" format="string">
 						<heading>3.</heading>
-					</control>
-				</setting>
-				<setting id="moviestacking/regexp$3" type="string" label="33080" help="">
-					<level>1</level>
-					<default></default>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control type="edit" format="string">
-						<heading>4.</heading>
 					</control>
 				</setting>
 			</group>
 			<group id="6">
-				<setting id="folderstacking#action" type="string" label="33090" help="">
-					<level>1</level>
+				<setting id="folderstacking#action" type="string" label="33090" help="33308">
+					<level>3</level>
 					<default>none</default>
 					<constraints>
 						<options>
@@ -487,8 +467,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="folderstacking/regexp$0" type="string" label="33077" help="">
-					<level>1</level>
+				<setting id="folderstacking/regexp$0" type="string" label="33077" help="33309">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -497,8 +477,8 @@
 						<heading>1.</heading>
 					</control>
 				</setting>
-				<setting id="folderstacking/regexp$1" type="string" label="33078" help="">
-					<level>1</level>
+				<setting id="folderstacking/regexp$1" type="string" label="33078" help="33309">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -507,8 +487,8 @@
 						<heading>2.</heading>
 					</control>
 				</setting>
-				<setting id="folderstacking/regexp$2" type="string" label="33079" help="">
-					<level>1</level>
+				<setting id="folderstacking/regexp$2" type="string" label="33079" help="33309">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -517,20 +497,10 @@
 						<heading>3.</heading>
 					</control>
 				</setting>
-				<setting id="folderstacking/regexp$3" type="string" label="33080" help="">
-					<level>1</level>
-					<default></default>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control type="edit" format="string">
-						<heading>4.</heading>
-					</control>
-				</setting>
 			</group>
 			<group id="7">
-				<setting id="tvmultipartmatching" type="string" label="33095" help="">
-					<level>1</level>
+				<setting id="tvmultipartmatching" type="string" label="33095" help="33310">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -539,8 +509,8 @@
 						<heading>tvmultipartmatching (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="trailermatching/regexp" type="string" label="33096" help="">
-					<level>1</level>
+				<setting id="trailermatching/regexp" type="string" label="33096" help="33311">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -551,8 +521,8 @@
 				</setting>
 			</group>
 			<group id="8">
-				<setting id="videoextensions/add" type="string" label="33065" help="">
-					<level>1</level>
+				<setting id="videoextensions/add" type="string" label="33065" help="33285">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -561,8 +531,8 @@
 						<heading>videoextensions - add</heading>
 					</control>
 				</setting>
-				<setting id="videoextensions/remove" type="string" label="33066" help="">
-					<level>1</level>
+				<setting id="videoextensions/remove" type="string" label="33066" help="33286">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -573,8 +543,8 @@
 				</setting>
 			</group>
 			<group id="9">
-				<setting id="discstubextensions/add" type="string" label="33099" help="">
-					<level>1</level>
+				<setting id="discstubextensions/add" type="string" label="33099" help="33312">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -583,8 +553,8 @@
 						<heading>discstubextensions - add</heading>
 					</control>
 				</setting>
-				<setting id="discstubextensions/remove" type="string" label="33100" help="">
-					<level>1</level>
+				<setting id="discstubextensions/remove" type="string" label="33100" help="33312">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -593,8 +563,8 @@
 						<heading>discstubextensions - remove</heading>
 					</control>
 				</setting>
-				<setting id="video/cleandatetime" type="string" label="33101" help="">
-					<level>1</level>
+				<setting id="video/cleandatetime" type="string" label="33101" help="33313">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -603,8 +573,8 @@
 						<heading>cleandatetime (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="video/excludefromscan/regexp" type="string" label="33102" help="">
-					<level>1</level>
+				<setting id="video/excludefromscan/regexp" type="string" label="33102" help="33314">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -613,8 +583,8 @@
 						<heading>excludefromscan (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="video/excludetvshowsfromscan/regexp" type="string" label="33103" help="">
-					<level>1</level>
+				<setting id="video/excludetvshowsfromscan/regexp" type="string" label="33103" help="33315">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -623,8 +593,8 @@
 						<heading>excludetvshowsfromscan (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="video/excludefromlisting/regexp" type="string" label="33104" help="">
-					<level>1</level>
+				<setting id="video/excludefromlisting/regexp" type="string" label="33104" help="33316">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -635,8 +605,8 @@
 				</setting>
 			</group>
 			<group id="10">
-				<setting id="video/cleanstrings#action" type="string" label="33105" help="">
-					<level>1</level>
+				<setting id="video/cleanstrings#action" type="string" label="33105" help="33317">
+					<level>3</level>
 					<default>none</default>
 					<constraints>
 						<options>
@@ -647,8 +617,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="video/cleanstrings/regexp$0" type="string" label="33077" help="">
-					<level>1</level>
+				<setting id="video/cleanstrings/regexp$0" type="string" label="33077" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -657,8 +627,8 @@
 						<heading>1.</heading>
 					</control>
 				</setting>
-				<setting id="video/cleanstrings/regexp$1" type="string" label="33078" help="">
-					<level>1</level>
+				<setting id="video/cleanstrings/regexp$1" type="string" label="33078" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -669,8 +639,8 @@
 				</setting>
 			</group>
 			<group id="11">
-				<setting id="videodatabase/type" type="string" label="33108" help="">
-					<level>1</level>
+				<setting id="videodatabase/type" type="string" label="33108" help="33319">
+					<level>3</level>
 					<default>sqlite3</default>
 					<constraints>
 						<options>
@@ -680,8 +650,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="videodatabase/host" type="string" label="33109" help="">
-					<level>1</level>
+				<setting id="videodatabase/host" type="string" label="33109" help="33320">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -690,15 +660,15 @@
 						<heading>videodatabase - host</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/port" type="integer" label="33110" help="">
-					<level>1</level>
+				<setting id="videodatabase/port" type="integer" label="33110" help="33321">
+					<level>3</level>
 					<default>9999</default>
 					<control type="edit" format="integer">
 						<heading>videodatabase - port</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/name" type="string" label="33111" help="">
-					<level>1</level>
+				<setting id="videodatabase/name" type="string" label="33111" help="33322">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -707,8 +677,8 @@
 						<heading>videodatabase - name</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/user" type="string" label="33112" help="">
-					<level>1</level>
+				<setting id="videodatabase/user" type="string" label="33112" help="33323">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -717,8 +687,8 @@
 						<heading>videodatabase - user</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/pass" type="string" label="33113" help="">
-					<level>1</level>
+				<setting id="videodatabase/pass" type="string" label="33113" help="33324">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -728,13 +698,13 @@
 						<hidden>true</hidden>
 					</control>
 				</setting>
-				<setting id="videodatabase/compression" type="boolean" label="33114" help="">
-					<level>1</level>
+				<setting id="videodatabase/compression" type="boolean" label="33114" help="33325">
+					<level>3</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="videodatabase/key" type="string" label="33115" help="">
-					<level>1</level>
+				<setting id="videodatabase/key" type="string" label="33115" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -743,8 +713,8 @@
 						<heading>videodatabase - key</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/cert" type="string" label="33116" help="">
-					<level>1</level>
+				<setting id="videodatabase/cert" type="string" label="33116" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -753,8 +723,8 @@
 						<heading>videodatabase - cert</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/ca" type="string" label="33117" help="">
-					<level>1</level>
+				<setting id="videodatabase/ca" type="string" label="33117" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -763,8 +733,8 @@
 						<heading>videodatabase - ca</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/capath" type="string" label="33118" help="">
-					<level>1</level>
+				<setting id="videodatabase/capath" type="string" label="33118" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -773,8 +743,8 @@
 						<heading>videodatabase - capath</heading>
 					</control>
 				</setting>
-				<setting id="videodatabase/ciphers" type="string" label="33119" help="">
-					<level>1</level>
+				<setting id="videodatabase/ciphers" type="string" label="33119" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -785,9 +755,9 @@
 				</setting>
 			</group>
 		</category>
-		<category id="audio" label="33120" help="">
+		<category id="audio" label="33120" help="33424">
 			<group id="1">
-				<setting id="headroom" type="integer" label="33121" help="">
+				<setting id="headroom" type="integer" label="33121" help="33327">
 					<level>1</level>
 					<default>0</default>
 					<constraints>
@@ -799,47 +769,47 @@
 						<popup>false</popup>
 					</control>
 				</setting>
-				<setting id="defaultplayer" type="string" label="33043" help="">
+				<setting id="defaultplayer" type="string" label="33043" help="33328">
 					<level>1</level>
 					<default>VideoPlayer</default>
 					<control type="edit" format="string">
 						<heading>defaultplayer</heading>
 					</control>
 				</setting>
-				<setting id="ac3downmixgain" type="integer" label="33123" help="">
+				<setting id="ac3downmixgain" type="integer" label="33123" help="33329">
 					<level>1</level>
 					<default>12</default>
 					<control type="edit" format="integer">
 						<heading>ac3downmixgain</heading>
 					</control>
 				</setting>
-				<setting id="usetimeseeking" type="boolean" label="33035" help="">
+				<setting id="usetimeseeking" type="boolean" label="33035" help="33330">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="timeseekforwardbig" type="integer" label="33036" help="">
+				<setting id="timeseekforwardbig" type="integer" label="33036" help="33331">
 					<level>1</level>
 					<default>600</default>
 					<control type="edit" format="integer">
 						<heading>timeseekforwardbig</heading>
 					</control>
 				</setting>
-				<setting id="timeseekbackwardbig" type="integer" label="33037" help="">
+				<setting id="timeseekbackwardbig" type="integer" label="33037" help="33332">
 					<level>1</level>
 					<default>-600</default>
 					<control type="edit" format="integer">
 						<heading>timeseekbackwardbig</heading>
 					</control>
 				</setting>
-				<setting id="playcountminimumpercent" type="integer" label="33044" help="">
+				<setting id="playcountminimumpercent" type="integer" label="33044" help="33333">
 					<level>1</level>
 					<default>90</default>
 					<control type="edit" format="integer">
 						<heading>playcountminimumpercent</heading>
 					</control>
 				</setting>
-				<setting id="applydrc" type="string" label="33128" help="">
+				<setting id="applydrc" type="string" label="33128" help="33334">
 					<level>1</level>
 					<default>0.0</default>
 					<constraints>
@@ -851,14 +821,14 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="limiterhold" type="integer" label="33129" help="">
+				<setting id="limiterhold" type="integer" label="33129" help="33335">
 					<level>1</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>limiterhold</heading>
 					</control>
 				</setting>
-				<setting id="limiterrelease" type="integer" label="33130" help="">
+				<setting id="limiterrelease" type="integer" label="33130" help="33335">
 					<level>1</level>
 					<default>0</default>
 					<control type="edit" format="integer">
@@ -867,10 +837,10 @@
 				</setting>
 			</group>
 		</category>
-		<category id="musiclibrary" label="33131" help="" parent="true">
+		<category id="musiclibrary" label="33131" help="33336" parent="true">
 			<group id="1">
-				<setting id="audio/excludefromscan/regexp" type="string" label="33102" help="">
-					<level>1</level>
+				<setting id="audio/excludefromscan/regexp" type="string" label="33102" help="33337">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -879,8 +849,8 @@
 						<heading>excludefromscan (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="audio/excludefromlisting/regexp" type="string" label="33104" help="">
-					<level>1</level>
+				<setting id="audio/excludefromlisting/regexp" type="string" label="33104" help="33338">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -889,8 +859,8 @@
 						<heading>excludefromlisting (regexp)</heading>
 					</control>
 				</setting>
-				<setting id="musicextensions/add" type="string" label="33134" help="">
-					<level>1</level>
+				<setting id="musicextensions/add" type="string" label="33134" help="33339">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -899,8 +869,8 @@
 						<heading>musicextensions - add</heading>
 					</control>
 				</setting>
-				<setting id="musicextensions/remove" type="string" label="33135" help="">
-					<level>1</level>
+				<setting id="musicextensions/remove" type="string" label="33135" help="33339">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -911,7 +881,7 @@
 				</setting>
 			</group>
 			<group id="2">
-				<setting id="cddbaddress" type="string" label="33136" help="">
+				<setting id="cddbaddress" type="string" label="33136" help="33340">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -921,7 +891,7 @@
 						<heading>cddbaddress</heading>
 					</control>
 				</setting>
-				<setting id="songinfoduration" type="integer" label="33137" help="">
+				<setting id="songinfoduration" type="integer" label="33137" help="33341">
 					<level>1</level>
 					<default>10</default>
 					<control type="edit" format="integer">
@@ -930,43 +900,43 @@
 				</setting>
 			</group>
 			<group id="3">
-				<setting id="musiclibrary/allitemsonbottom" type="boolean" label="33067" help="">
+				<setting id="musiclibrary/allitemsonbottom" type="boolean" label="33067" help="33342">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="musiclibrary/cleanonupdate" type="boolean" label="33068" help="">
+				<setting id="musiclibrary/cleanonupdate" type="boolean" label="33068" help="33343">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="musiclibrary/recentlyaddeditems" type="integer" label="33070" help="">
+				<setting id="musiclibrary/recentlyaddeditems" type="integer" label="33070" help="33344">
 					<level>1</level>
 					<default>25</default>
 					<control type="edit" format="integer">
 						<heading>recentlyaddeditems</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/albumformat" type="string" label="33141" help="">
+				<setting id="musiclibrary/albumformat" type="string" label="33141" help="33345">
 					<level>1</level>
 					<default>%B</default>
 					<control type="edit" format="string">
 						<heading>albumformat</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/prioritiseapetags" type="boolean" label="33142" help="">
+				<setting id="musiclibrary/prioritiseapetags" type="boolean" label="33142" help="33346">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="musiclibrary/itemseparator" type="string" label="33071" help="">
+				<setting id="musiclibrary/itemseparator" type="string" label="33071" help="33347">
 					<level>1</level>
 					<default> / </default>
 					<control type="edit" format="string">
 						<heading>itemseparator</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/dateadded" type="string" label="33075" help="">
+				<setting id="musiclibrary/dateadded" type="string" label="33075" help="33348">
 					<level>1</level>
 					<default>1</default>
 					<constraints>
@@ -978,14 +948,14 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="musiclibrary/useisodates" type="boolean" label="33145" help="">
+				<setting id="musiclibrary/useisodates" type="boolean" label="33145" help="33349">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 			<group id="4">
-				<setting id="musicfilenamefilters/filter" type="string" label="33146" help="">
+				<setting id="musicfilenamefilters/filter" type="string" label="33146" help="33350">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -997,8 +967,8 @@
 				</setting>
 			</group>
 			<group id="5">
-				<setting id="musiclibrary/artistseparators/separator$0" type="string" label="33147" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$0" type="string" label="33147" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1007,8 +977,8 @@
 						<heading>artistseparator1</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$1" type="string" label="33148" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$1" type="string" label="33148" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1017,8 +987,8 @@
 						<heading>artistseparator2</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$2" type="string" label="33149" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$2" type="string" label="33149" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1027,8 +997,8 @@
 						<heading>artistseparator3</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$3" type="string" label="33150" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$3" type="string" label="33150" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1037,8 +1007,8 @@
 						<heading>artistseparator4</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$4" type="string" label="33151" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$4" type="string" label="33151" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1047,8 +1017,8 @@
 						<heading>artistseparator5</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$5" type="string" label="33152" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$5" type="string" label="33152" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1057,8 +1027,8 @@
 						<heading>artistseparator6</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$6" type="string" label="33153" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$6" type="string" label="33153" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1067,8 +1037,8 @@
 						<heading>artistseparator7</heading>
 					</control>
 				</setting>
-				<setting id="musiclibrary/artistseparators/separator$7" type="string" label="33154" help="">
-					<level>1</level>
+				<setting id="musiclibrary/artistseparators/separator$7" type="string" label="33154" help="33318">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1079,8 +1049,8 @@
 				</setting>
 			</group>
 			<group id="6">
-				<setting id="musicdatabase/type" type="string" label="33155" help="">
-					<level>1</level>
+				<setting id="musicdatabase/type" type="string" label="33155" help="33319">
+					<level>3</level>
 					<default>sqlite3</default>
 					<constraints>
 						<options>
@@ -1090,8 +1060,8 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="musicdatabase/host" type="string" label="33156" help="">
-					<level>1</level>
+				<setting id="musicdatabase/host" type="string" label="33156" help="33320">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1100,15 +1070,15 @@
 						<heading>musicdatabase - host</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/port" type="integer" label="33157" help="">
-					<level>1</level>
+				<setting id="musicdatabase/port" type="integer" label="33157" help="33321">
+					<level>3</level>
 					<default>9999</default>
 					<control type="edit" format="integer">
 						<heading>musicdatabase - port</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/name" type="string" label="33158" help="">
-					<level>1</level>
+				<setting id="musicdatabase/name" type="string" label="33158" help="33322">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1117,8 +1087,8 @@
 						<heading>musicdatabase - name</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/user" type="string" label="33159" help="">
-					<level>1</level>
+				<setting id="musicdatabase/user" type="string" label="33159" help="33323">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1127,8 +1097,8 @@
 						<heading>musicdatabase - user</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/pass" type="string" label="33160" help="">
-					<level>1</level>
+				<setting id="musicdatabase/pass" type="string" label="33160" help="33324">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1138,13 +1108,13 @@
 						<hidden>true</hidden>
 					</control>
 				</setting>
-				<setting id="musicdatabase/compression" type="boolean" label="33161" help="">
-					<level>1</level>
+				<setting id="musicdatabase/compression" type="boolean" label="33161" help="33325">
+					<level>3</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="musicdatabase/key" type="string" label="33162" help="">
-					<level>1</level>
+				<setting id="musicdatabase/key" type="string" label="33162" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1153,8 +1123,8 @@
 						<heading>musicdatabase - key</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/cert" type="string" label="33163" help="">
-					<level>1</level>
+				<setting id="musicdatabase/cert" type="string" label="33163" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1163,8 +1133,8 @@
 						<heading>musicdatabase - cert</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/ca" type="string" label="33164" help="">
-					<level>1</level>
+				<setting id="musicdatabase/ca" type="string" label="33164" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1173,8 +1143,8 @@
 						<heading>musicdatabase - ca</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/capath" type="string" label="33165" help="">
-					<level>1</level>
+				<setting id="musicdatabase/capath" type="string" label="33165" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1183,8 +1153,8 @@
 						<heading>musicdatabase - capath</heading>
 					</control>
 				</setting>
-				<setting id="musicdatabase/ciphers" type="string" label="33166" help="">
-					<level>1</level>
+				<setting id="musicdatabase/ciphers" type="string" label="33166" help="33326">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1195,9 +1165,9 @@
 				</setting>
 			</group>
 		</category>
-		<category id="photo" label="33167" help="" parent="true">
-			<group id="1">
-				<setting id="pictureextensions/add" type="string" label="33168" help="">
+		<category id="photo" label="33167" help="33351" parent="true">
+			<group id="2">
+				<setting id="pictureextensions/add" type="string" label="33168" help="33352">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1207,8 +1177,8 @@
 						<heading>pictureextensions - add</heading>
 					</control>
 				</setting>
-				<setting id="pictureextensions/remove" type="string" label="33169" help="">
-					<level>1</level>
+				<setting id="pictureextensions/remove" type="string" label="33169" help="33352">
+					<level>2</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1219,8 +1189,8 @@
 				</setting>
 			</group>
 			<group id="2">
-				<setting id="pictureexcludes/regexp$0" type="string" label="33170" help="">
-					<level>1</level>
+				<setting id="pictureexcludes/regexp$0" type="string" label="33170" help="33353">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1229,8 +1199,8 @@
 						<heading>pictureexcludes1</heading>
 					</control>
 				</setting>
-				<setting id="pictureexcludes/regexp$1" type="string" label="33171" help="">
-					<level>1</level>
+				<setting id="pictureexcludes/regexp$1" type="string" label="33171" help="33353">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1239,8 +1209,8 @@
 						<heading>pictureexcludes2</heading>
 					</control>
 				</setting>
-				<setting id="pictureexcludes/regexp$2" type="string" label="33172" help="">
-					<level>1</level>
+				<setting id="pictureexcludes/regexp$2" type="string" label="33172" help="33353">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1249,8 +1219,8 @@
 						<heading>pictureexcludes3</heading>
 					</control>
 				</setting>
-				<setting id="pictureexcludes/regexp$3" type="string" label="33173" help="">
-					<level>1</level>
+				<setting id="pictureexcludes/regexp$3" type="string" label="33173" help="33353">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1261,21 +1231,21 @@
 				</setting>
 			</group>
 			<group id="3">
-				<setting id="slideshow/panamount" type="string" label="33174" help="">
+				<setting id="slideshow/panamount" type="string" label="33174" help="33354">
 					<level>1</level>
 					<default>2.5</default>
 					<control type="edit" format="string">
 						<heading>slideshow - panamount</heading>
 					</control>
 				</setting>
-				<setting id="slideshow/zoomamount" type="string" label="33175" help="">
+				<setting id="slideshow/zoomamount" type="string" label="33175" help="33355">
 					<level>1</level>
 					<default>5.0</default>
 					<control type="edit" format="string">
 						<heading>slideshow - zoomamount</heading>
 					</control>
 				</setting>
-				<setting id="slideshow/blackbarcompensation" type="integer" label="33176" help="">
+				<setting id="slideshow/blackbarcompensation" type="integer" label="33176" help="33356">
 					<level>1</level>
 					<default>20</default>
 					<control type="edit" format="integer">
@@ -1284,14 +1254,14 @@
 				</setting>
 			</group>
 		</category>
-		<category id="network" label="33177" help="" parent="true">
+		<category id="network" label="33177" help="33357" parent="true">
 			<group id="1">
-				<setting id="ftp/remotethumbs" type="boolean" label="33178" help="">
+				<setting id="ftp/remotethumbs" type="boolean" label="33178" help="33358">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="samba/doscodepage" type="string" label="33179" help="">
+				<setting id="samba/doscodepage" type="string" label="33179" help="33359">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1301,26 +1271,26 @@
 						<heading>samba - doscodepage</heading>
 					</control>
 				</setting>
-				<setting id="samba/clienttimeout" type="integer" label="33180" help="">
+				<setting id="samba/clienttimeout" type="integer" label="33180" help="33360">
 					<level>1</level>
 					<default>10</default>
 					<control type="edit" format="integer">
 						<heading>samba - clienttimeout</heading>
 					</control>
 				</setting>
-				<setting id="samba/statfiles" type="boolean" label="33181" help="">
+				<setting id="samba/statfiles" type="boolean" label="33181" help="33361">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="hosts/entry" type="string" label="33182" help="">
+				<setting id="hosts/entry" type="string" label="33182" help="33362">
 					<level>1</level>
 					<default>0.0.0.0</default>
 					<control type="edit" format="ip">
 						<heading>hosts - ip address</heading>
 					</control>
 				</setting>
-				<setting id="hosts/entry#name" type="string" label="33183" help="">
+				<setting id="hosts/entry#name" type="string" label="33183" help="33363">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1330,28 +1300,28 @@
 						<heading>hosts - hostname</heading>
 					</control>
 				</setting>
-				<setting id="network/curlclienttimeout" type="integer" label="33184" help="">
+				<setting id="network/curlclienttimeout" type="integer" label="33184" help="33364">
 					<level>0</level>
 					<default>10</default>
 					<control type="edit" format="integer">
 						<heading>network - curlclienttimeout</heading>
 					</control>
 				</setting>
-				<setting id="network/curllowspeedtime" type="integer" label="33185" help="">
+				<setting id="network/curllowspeedtime" type="integer" label="33185" help="33365">
 					<level>0</level>
 					<default>20</default>
 					<control type="edit" format="integer">
 						<heading>network - curllowspeedtime</heading>
 					</control>
 				</setting>
-				<setting id="network/curlretries" type="integer" label="33186" help="">
+				<setting id="network/curlretries" type="integer" label="33186" help="33366">
 					<level>0</level>
 					<default>2</default>
 					<control type="edit" format="integer">
 						<heading>network - curlretries</heading>
 					</control>
 				</setting>
-				<setting id="network/httpproxyusername" type="string" label="33187" help="">
+				<setting id="network/httpproxyusername" type="string" label="33187" help="33367">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1361,7 +1331,7 @@
 						<heading>network - httpproxyusername</heading>
 					</control>
 				</setting>
-				<setting id="network/httpproxypassword" type="string" label="33188" help="">
+				<setting id="network/httpproxypassword" type="string" label="33188" help="33368">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1372,24 +1342,24 @@
 						<hidden>true</hidden>
 					</control>
 				</setting>
-				<setting id="network/disableipv6" type="boolean" label="33189" help="">
+				<setting id="network/disableipv6" type="boolean" label="33189" help="33369">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="network/disablehttp2" type="boolean" label="33190" help="">
+				<setting id="network/disablehttp2" type="boolean" label="33190" help="33370">
 					<level>0</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="network/nfstimeout" type="integer" label="33191" help="">
+				<setting id="network/nfstimeout" type="integer" label="33191" help="33371">
 					<level>1</level>
 					<default>5</default>
 					<control type="edit" format="integer">
 						<heading>network - nfstimeout</heading>
 					</control>
 				</setting>
-				<setting id="network/catrustfile" type="string" label="33192" help="">
+				<setting id="network/catrustfile" type="string" label="33192" help="33372">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1401,92 +1371,92 @@
 				</setting>
 			</group>
 		</category>
-		<category id="epg" label="33193" help="">
+		<category id="epg" label="33193" help="33373">
 			<group id="1">
-				<setting id="updatecheckinterval" type="integer" label="33194" help="">
+				<setting id="updatecheckinterval" type="integer" label="33194" help="33374">
 					<level>1</level>
 					<default>300</default>
 					<control type="edit" format="integer">
 						<heading>updatecheckinterval</heading>
 					</control>
 				</setting>
-				<setting id="updateemptytagsinterval" type="integer" label="33195" help="">
+				<setting id="updateemptytagsinterval" type="integer" label="33195" help="33375">
 					<level>1</level>
 					<default>60</default>
 					<control type="edit" format="integer">
 						<heading>updateemptytagsinterval</heading>
 					</control>
 				</setting>
-				<setting id="cleanupinterval" type="integer" label="33196" help="">
+				<setting id="cleanupinterval" type="integer" label="33196" help="33376">
 					<level>1</level>
 					<default>900</default>
 					<control type="edit" format="integer">
 						<heading>cleanupinterval</heading>
 					</control>
 				</setting>
-				<setting id="activetagcheckinterval" type="integer" label="33197" help="">
+				<setting id="activetagcheckinterval" type="integer" label="33197" help="33377">
 					<level>1</level>
 					<default>60</default>
 					<control type="edit" format="integer">
 						<heading>activetagcheckinterval</heading>
 					</control>
 				</setting>
-				<setting id="retryinterruptedupdateinterval" type="integer" label="33198" help="">
+				<setting id="retryinterruptedupdateinterval" type="integer" label="33198" help="33378">
 					<level>1</level>
 					<default>60</default>
 					<control type="edit" format="integer">
 						<heading>retryinterruptedupdateinterval</heading>
 					</control>
 				</setting>
-				<setting id="displayupdatepopup" type="boolean" label="33199" help="">
+				<setting id="displayupdatepopup" type="boolean" label="33199" help="33379">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="displayincrementalupdatepopup" type="boolean" label="33200" help="">
+				<setting id="displayincrementalupdatepopup" type="boolean" label="33200" help="33380">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 		</category>
-		<category id="edl" label="33201" help="">
+		<category id="edl" label="33201" help="33381">
 			<group id="1">
-				<setting id="mergeshortcommbreaks" type="boolean" label="33202" help="">
-					<level>1</level>
+				<setting id="mergeshortcommbreaks" type="boolean" label="33202" help="33382">
+					<level>2</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="maxcommbreaklength" type="integer" label="33203" help="">
-					<level>1</level>
+				<setting id="maxcommbreaklength" type="integer" label="33203" help="33383">
+					<level>2</level>
 					<default>250</default>
 					<control type="edit" format="integer">
 						<heading>maxcommbreaklength</heading>
 					</control>
 				</setting>
-				<setting id="mincommbreaklength" type="integer" label="33204" help="">
-					<level>1</level>
+				<setting id="mincommbreaklength" type="integer" label="33204" help="33384">
+					<level>2</level>
 					<default>90</default>
 					<control type="edit" format="integer">
 						<heading>mincommbreaklength</heading>
 					</control>
 				</setting>
-				<setting id="maxcommbreakgap" type="integer" label="33205" help="">
-					<level>1</level>
+				<setting id="maxcommbreakgap" type="integer" label="33205" help="33385">
+					<level>2</level>
 					<default>120</default>
 					<control type="edit" format="integer">
 						<heading>maxcommbreakgap</heading>
 					</control>
 				</setting>
-				<setting id="commbreakautowait" type="integer" label="33206" help="">
-					<level>1</level>
+				<setting id="commbreakautowait" type="integer" label="33206" help="33386">
+					<level>2</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>commbreakautowait</heading>
 					</control>
 				</setting>
-				<setting id="commbreakautowind" type="integer" label="33207" help="">
-					<level>1</level>
+				<setting id="commbreakautowind" type="integer" label="33207" help="33387">
+					<level>2</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>commbreakautowind</heading>
@@ -1494,40 +1464,40 @@
 				</setting>
 			</group>
 		</category>
-		<category id="pvr" label="33208" help="">
+		<category id="pvr" label="33208" help="33388">
 			<group id="1">
-				<setting id="timecorrection" type="integer" label="33209" help="">
+				<setting id="timecorrection" type="integer" label="33209" help="33389">
 					<level>1</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>timecorrection</heading>
 					</control>
 				</setting>
-				<setting id="infotoggleinterval" type="integer" label="33210" help="">
+				<setting id="infotoggleinterval" type="integer" label="33210" help="33390">
 					<level>1</level>
 					<default>3000</default>
 					<control type="edit" format="integer">
 						<heading>infotoggleinterval</heading>
 					</control>
 				</setting>
-				<setting id="channeliconsautoscan" type="boolean" label="33211" help="">
+				<setting id="channeliconsautoscan" type="boolean" label="33211" help="33391">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="autoscaniconsuserset" type="boolean" label="33212" help="">
+				<setting id="autoscaniconsuserset" type="boolean" label="33212" help="33392">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="numericchannelswitchtimeout" type="string" label="33213" help="">
+				<setting id="numericchannelswitchtimeout" type="string" label="33213" help="33393">
 					<level>1</level>
 					<default>1000</default>
 					<control type="edit" format="integer">
 						<heading>numericchannelswitchtimeout</heading>
 					</control>
 				</setting>
-				<setting id="pvrrecordings/sortmethod" type="string" label="33214" help="">
+				<setting id="pvrrecordings/sortmethod" type="string" label="33214" help="33394">
 					<level>1</level>
 					<default>0</default>
 					<constraints>
@@ -1540,7 +1510,7 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="pvrrecordings/sortorder" type="string" label="33215" help="">
+				<setting id="pvrrecordings/sortorder" type="string" label="33215" help="33395">
 					<level>1</level>
 					<default>0</default>
 					<constraints>
@@ -1553,9 +1523,9 @@
 				</setting>
 			</group>
 		</category>
-		<category id="cache" label="33216" help="">
+		<category id="cache" label="33216" help="33396">
 			<group id="1">
-				<setting id="buffermode" type="integer" label="33217" help="">
+				<setting id="buffermode" type="integer" label="33217" help="33397">
 					<level>0</level>
 					<default>0</default>
 					<constraints>
@@ -1569,12 +1539,12 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="optimized" type="boolean" label="33246" help="">
+				<setting id="optimized" type="boolean" label="33246" help="33398">
 					<level>0</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="memorysize" type="string" label="33218" help="">
+				<setting id="memorysize" type="string" label="33218" help="33399">
 					<level>0</level>
 					<default>20971520</default>
 					<dependencies>
@@ -1586,7 +1556,7 @@
 						<heading>memorysize</heading>
 					</control>
 				</setting>
-				<setting id="readfactor" type="integer" label="33219" help="">
+				<setting id="readfactor" type="integer" label="33219" help="33400">
 					<level>0</level>
 					<default>4</default>
 					<control type="edit" format="integer">
@@ -1595,9 +1565,9 @@
 				</setting>
 			</group>
 		</category>
-		<category id="system" label="33220" help="" parent="true">
+		<category id="system" label="33220" help="33401" parent="true">
 			<group id="1">
-				<setting id="loglevel" type="string" label="33221" help="">
+				<setting id="loglevel" type="string" label="33221" help="33402">
 					<level>1</level>
 					<default>0</default>
 					<constraints>
@@ -1611,14 +1581,14 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="loglevel#hide" type="boolean" label="33222" help="">
+				<setting id="loglevel#hide" type="boolean" label="33222" help="33403">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 			<group id="2">
-				<setting id="skiploopfilter" type="string" label="33223" help="">
+				<setting id="skiploopfilter" type="string" label="33223" help="33404">
 					<level>1</level>
 					<default>0</default>
 					<constraints>
@@ -1633,48 +1603,48 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="forcedswaptime" type="integer" label="33224" help="">
+				<setting id="forcedswaptime" type="integer" label="33224" help="33405">
 					<level>1</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>forcedswaptime</heading>
 					</control>
 				</setting>
-				<setting id="videoscanner/ignoreerrors" type="boolean" label="33225" help="">
+				<setting id="videoscanner/ignoreerrors" type="boolean" label="33225" help="33406">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 			<group id="3">
-				<setting id="remotedelay" type="integer" label="33226" help="">
+				<setting id="remotedelay" type="integer" label="33226" help="33407">
 					<level>1</level>
 					<default>3</default>
 					<control type="edit" format="integer">
 						<heading>remotedelay</heading>
 					</control>
 				</setting>
-				<setting id="enablemultimediakeys" type="boolean" label="33227" help="">
+				<setting id="enablemultimediakeys" type="boolean" label="33227" help="33408">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="scanirserver" type="boolean" label="33228" help="">
-					<level>1</level>
+				<setting id="scanirserver" type="boolean" label="33228" help="33409">
+					<level>3</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 			<group id="4">
-				<setting id="restrictcapsmask" type="integer" label="33229" help="">
-					<level>1</level>
+				<setting id="restrictcapsmask" type="integer" label="33229" help="33410">
+					<level>3</level>
 					<default>0</default>
 					<control type="edit" format="integer">
 						<heading>restrictcapsmask</heading>
 					</control>
 				</setting>
-				<setting id="gui/algorithmdirtyregions" type="string" label="33230" help="">
-					<level>1</level>
+				<setting id="gui/algorithmdirtyregions" type="string" label="33230" help="33411">
+					<level>3</level>
 					<default>3</default>
 					<constraints>
 						<options>
@@ -1686,33 +1656,33 @@
 					</constraints>
 					<control type="spinner" format="string"/>
 				</setting>
-				<setting id="gui/visualizedirtyregions" type="boolean" label="33231" help="">
-					<level>1</level>
+				<setting id="gui/visualizedirtyregions" type="boolean" label="33231" help="33412">
+					<level>3</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="gui/smartredraw" type="boolean" label="33232" help="">
-					<level>1</level>
+				<setting id="gui/smartredraw" type="boolean" label="33232" help="33413">
+					<level>3</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="showexitbutton" type="boolean" label="33233" help="">
+				<setting id="showexitbutton" type="boolean" label="33233" help="33414">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="fullscreen" type="boolean" label="33234" help="">
+				<setting id="fullscreen" type="boolean" label="33234" help="33415">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="splash" type="boolean" label="33235" help="">
+				<setting id="splash" type="boolean" label="33235" help="33416">
 					<level>1</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="cputempcommand" type="string" label="33236" help="">
-					<level>1</level>
+				<setting id="cputempcommand" type="string" label="33236" help="33417">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1721,8 +1691,8 @@
 						<heading>cputempcommand</heading>
 					</control>
 				</setting>
-				<setting id="gputempcommand" type="string" label="33237" help="">
-					<level>1</level>
+				<setting id="gputempcommand" type="string" label="33237" help="33418">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1731,8 +1701,8 @@
 						<heading>gputempcommand</heading>
 					</control>
 				</setting>
-				<setting id="glrectanglehack" type="string" label="33238" help="">
-					<level>1</level>
+				<setting id="glrectanglehack" type="string" label="33238" help="33419">
+					<level>3</level>
 					<default></default>
 					<constraints>
 						<allowempty>true</allowempty>
@@ -1741,7 +1711,7 @@
 						<heading>glrectanglehack</heading>
 					</control>
 				</setting>
-				<setting id="alwaysontop" type="string" label="33239" help="">
+				<setting id="alwaysontop" type="string" label="33239" help="33420">
 					<level>1</level>
 					<default></default>
 					<constraints>
@@ -1751,20 +1721,20 @@
 						<heading>alwaysontop</heading>
 					</control>
 				</setting>
-				<setting id="minimizetotray" type="boolean" label="33240" help="">
+				<setting id="minimizetotray" type="boolean" label="33240" help="33421">
 					<level>1</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
 			<group id="5">
-				<setting id="jsonrpc/compactoutput" type="boolean" label="33241" help="">
-					<level>1</level>
+				<setting id="jsonrpc/compactoutput" type="boolean" label="33241" help="33422">
+					<level>3</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="jsonrpc/tcpport" type="integer" label="33242" help="">
-					<level>1</level>
+				<setting id="jsonrpc/tcpport" type="integer" label="33242" help="33423">
+					<level>3</level>
 					<default>9999</default>
 					<control type="edit" format="integer">
 						<heading>jsonrpc - tcpport</heading>
