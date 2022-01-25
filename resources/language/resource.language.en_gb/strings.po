@@ -1637,7 +1637,7 @@ msgid "Static dns entries which take precedence over your dns server."
 msgstr ""
 
 msgctxt "#33363"
-msgid "Hostname"
+msgid "Add hostname."
 msgstr ""
 
 msgctxt "#33364"
