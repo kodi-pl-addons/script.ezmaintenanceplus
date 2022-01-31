@@ -211,7 +211,7 @@
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="playlistretries" type="integer" label="33061" help="">
+				<setting id="playlistretries" type="integer" label="33061" help="33425">
 					<level>1</level>
 					<default>100</default>
 					<control type="edit" format="integer">
