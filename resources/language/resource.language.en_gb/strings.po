@@ -8,6 +8,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_GB\n"
 
+msgctxt "#30002"
+msgid "Buffer all internet filesystems + ftp, webdav"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Buffer all filesystems"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Only buffer true internet filesystems"
+msgstr ""
+
+msgctxt "#30005"
+msgid "No buffer"
+msgstr ""
+
+msgctxt "#30006"
+msgid "All network filesystems"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Buffer Size (bytes)"
+msgstr ""
+
+msgctxt "#30100"
+msgid "Logging"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Logging Level"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Normal logging, only logging errors"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Debug logging with freemem, fps and cpu usage"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Debug logging with on-screen display"
+msgstr ""
+
+msgctxt "#30105"
+msgid "Debug logging with smb, no on-screen display"
+msgstr ""
+
+msgctxt "#30106"
+msgid "No logging"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Hide 'Enable Debugging' Setting"
+msgstr ""
+
+msgctxt "#30200"
+msgid "System"
+msgstr ""
+
+msgctxt "#30221"
+msgid "Skip only empty frames (default)"
+msgstr ""
+
+msgctxt "#30222"
+msgid "Skip non-reference frames"
+msgstr ""
+
+msgctxt "#30223"
+msgid "Skip bi-dir frames"
+msgstr ""
+
+msgctxt "#30224"
+msgid "Skip all non-key frames"
+msgstr ""
+
+msgctxt "#30225"
+msgid "Skip all frames"
+msgstr ""
+
+msgctxt "#30226"
+msgid "None"
+msgstr ""
+
 msgctxt "#30800"
 msgid "Unable to parse"
 msgstr ""

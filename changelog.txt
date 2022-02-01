@@ -24,3 +24,6 @@ v2021.01.25.1
 
 v2021.01.31.1
 - Deleted duplicates in strings.po
+
+v2021.02.01.1
+- Fixed missing translations.
