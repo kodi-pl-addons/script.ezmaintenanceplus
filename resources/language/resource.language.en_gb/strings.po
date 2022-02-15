@@ -92,6 +92,30 @@ msgctxt "#30226"
 msgid "None"
 msgstr ""
 
+msgctxt "#30251"
+msgid "Name"
+msgstr ""
+
+msgctxt "#30252"
+msgid "Date"
+msgstr ""
+
+msgctxt "#30253"
+msgid "Size"
+msgstr ""
+
+msgctxt "#30254"
+msgid "File"
+msgstr ""
+
+msgctxt "#30256"
+msgid "Ascending"
+msgstr ""
+
+msgctxt "#30257"
+msgid "Descending"
+msgstr ""
+
 msgctxt "#30800"
 msgid "Unable to parse"
 msgstr ""
