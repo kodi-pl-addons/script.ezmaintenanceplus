@@ -61,7 +61,39 @@ if notify_mode == 'true': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % (
 time.sleep(3)
 if auto_clean  == 'true': maintenance.clearCache()
 
+maintenance.logMaintenance("Service started")
 
 
+class Monitor(xbmc.Monitor):
+
+    def __init__(self):
+        xbmc.Monitor.__init__(self)
+        maintenance.logMaintenance("Monitor init")
+        maintenance.determineNextMaintenance()
+
+    def onSettingsChanged(self):
+        maintenance.logMaintenance("onSettingsChanged")
+        maintenance.determineNextMaintenance()
 
 
+if __name__ == '__main__':
+
+    monitor = Monitor()
+
+    while not monitor.abortRequested():
+        # Sleep/wait for abort for 10 seconds
+        if monitor.waitForAbort(10):
+            # Abort was requested while waiting. We should exit
+            break
+        maintenance.logMaintenance("monitor loop")
+        if not xbmc.Player().isPlayingVideo():
+            nextMaintenance = maintenance.getNextMaintenance()
+            maintenance.logMaintenance("time.time() = %s, nextMaintenance = %s" % (str(time.time()), str(nextMaintenance)))
+            if nextMaintenance > 0 and time.time() >= nextMaintenance:
+                xbmc.log("ezmaintenanceplus: AutoClean started", level=loglevel)
+                maintenance.clearCache()
+                xbmc.log("ezmaintenanceplus: AutoClean done", level=loglevel)
+                maintenance.determineNextMaintenance()
+                # xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance' , 'Clean Completed' , '3000', iconpath))
+
+    del monitor

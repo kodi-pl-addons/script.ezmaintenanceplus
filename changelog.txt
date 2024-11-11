@@ -27,3 +27,15 @@ v2021.01.31.1
 
 v2021.02.01.1
 - Fixed missing translations.
+
+v2022.12.28.0
+- Fix backup. Crashed when foreign like Hebrew characters are used in xml files
+
+2023.01.01.0
+ - Fix a fix on 2022.12.28.0
+ 
+2023.01.09.0
+ - Added AutoClean Cache functionality every x days at a given hour.
+ - Backup always replaced the home folder reference in xml files with special://home
+   Not all addons can handle this replace so it is now possible via a setting to disable this.
+ - Backup Cancel didn't work. This is now fixed.

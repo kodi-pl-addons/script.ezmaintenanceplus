@@ -1659,3 +1659,19 @@ msgstr ""
 msgctxt "#33425"
 msgid "The number of retries attempted if a source is offline. With this control you can alter the number of consecutive failed items before a playlist fails."
 msgstr ""
+
+msgctxt "#33426"
+msgid "AutoClean"
+msgstr ""
+
+msgctxt "#33427"
+msgid "AutoClean Cache Every Number of Days (0 is Not)"
+msgstr ""
+
+msgctxt "#33428"
+msgid "AutoClean Cache at Hour (0-12 = AM / 12-23 = PM)"
+msgstr ""
+
+msgctxt "#33429"
+msgid "Replace home folder in xml files with special://home"
+msgstr ""
