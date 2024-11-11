@@ -23,8 +23,10 @@ from resources.lib.modules.backtothefuture import unicode, PY2
 
 if PY2:
     FancyURLopener = urllib.FancyURLopener
+    from io import open as open
 else:
     FancyURLopener = urllib.request.FancyURLopener
+    unicode = str
 
 dp           = xbmcgui.DialogProgress()
 dialog       = xbmcgui.Dialog()
@@ -71,21 +73,31 @@ def ENABLE_ADDONS():
 
 def FIX_SPECIAL():
 
-    HOME =  translatePath('special://home')
-    dp.create(AddonTitle,"Renaming paths...")
+    HOME = translatePath('special://home')
+    dp.create(AddonTitle, "Renaming paths...")
     url = translatePath('special://userdata')
     for root, dirs, files in os.walk(url):
         for file in files:
             if file.endswith(".xml"):
-                 if PY2:
-                     dp.update(0,"Fixing", "[COLOR dodgerblue]" + file + "[/COLOR]")
-                 else:
-                     dp.update(0,"Fixing" + '\n' + "[COLOR dodgerblue]" + file + "[/COLOR]")
-                 a=open((os.path.join(root, file))).read()
-                 b=a.replace(HOME, 'special://home/')
-                 f= open((os.path.join(root, file)), mode='w')
-                 f.write(str(b))
-                 f.close()
+                if PY2:
+                    dp.update(0, "Fixing", "[COLOR dodgerblue]" + file + "[/COLOR]")
+                else:
+                    dp.update(0, "Fixing" + '\n' + "[COLOR dodgerblue]" + file + "[/COLOR]")
+                try:
+                    a = open((os.path.join(root, file)), 'r', encoding='utf-8').read()
+                    b = a.replace(HOME, 'special://home/')
+                    f = open((os.path.join(root, file)), mode='w', encoding='utf-8')
+                    f.write(unicode(b))
+                    f.close()
+                except:
+                    try:
+                        a = open((os.path.join(root, file)), 'r').read()
+                        b = a.replace(HOME, 'special://home/')
+                        f = open((os.path.join(root, file)), mode='w')
+                        f.write(unicode(b))
+                        f.close()
+                    except:
+                        pass
 
 
 def skinswap():
