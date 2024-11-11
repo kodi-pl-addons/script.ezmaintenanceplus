@@ -5,9 +5,9 @@
 '''
 
 
-import os,sys
+import os, sys
 
-import xbmc,xbmcaddon,xbmcplugin,xbmcgui,xbmcvfs
+import xbmc, xbmcaddon, xbmcplugin, xbmcgui, xbmcvfs
 
 
 integer = 1000
@@ -91,46 +91,45 @@ addonPath = translatePath(addonInfo('path'))
 AddonID = 'script.ezmaintenanceplus'
 artPath = translatePath(os.path.join('special://home/addons/' + AddonID, 'art'))
 # DIRECTORIES
-backupdir        =  translatePath(os.path.join('special://home/backupdir',''))
-packagesdir      =  translatePath(os.path.join('special://home/addons/packages',''))
-USERDATA         =  translatePath(os.path.join('special://home/userdata',''))
-ADDON_DATA       =  translatePath(os.path.join(USERDATA, 'addon_data'))
-HOME             =  translatePath('special://home/')
-HOME_ADDONS      =  translatePath('special://home/addons')
+backupdir = translatePath(os.path.join('special://home/backupdir', ''))
+packagesdir = translatePath(os.path.join('special://home/addons/packages', ''))
+USERDATA = translatePath(os.path.join('special://home/userdata', ''))
+ADDON_DATA = translatePath(os.path.join(USERDATA, 'addon_data'))
+HOME = translatePath('special://home/')
+HOME_ADDONS = translatePath('special://home/addons')
 
 
 def addonIcon():
-    path = translatePath(os.path.join('special://home/addons/' + AddonID , 'icon.png'))
+    path = translatePath(os.path.join('special://home/addons/' + AddonID, 'icon.png'))
     return path
 
 def addonThumb():
-    theme = appearance() ; art = artPath()
+    theme = appearance(); art = artPath()
     if not (art == None and theme in ['-', '']): return os.path.join(art, 'poster.png')
     elif theme == '-': return 'DefaultFolder.png'
     return addonInfo('icon')
 
 
 def addonPoster():
-    theme = appearance() ; art = artPath()
+    theme = appearance(); art = artPath()
     if not (art == None and theme in ['-', '']): return os.path.join(art, 'poster.png')
     return 'DefaultVideo.png'
 
 
 def addonBanner():
-    theme = appearance() ; art = artPath()
+    theme = appearance(); art = artPath()
     if not (art == None and theme in ['-', '']): return os.path.join(art, 'banner.png')
     return 'DefaultVideo.png'
 
 
 def addonFanart():
-    return translatePath(os.path.join('special://home/addons/' + AddonID , 'fanart.jpg'))
+    return translatePath(os.path.join('special://home/addons/' + AddonID, 'fanart.jpg'))
 
 
 def addonNext():
-    theme = appearance() ; art = artPath()
+    theme = appearance(); art = artPath()
     if not (art == None and theme in ['-', '']): return os.path.join(art, 'next.png')
     return 'DefaultVideo.png'
-
 
 
 def infoDialog(message, heading=addonInfo('name'), icon='', time=None, sound=False):
@@ -171,11 +170,14 @@ def getCurrentViewId():
 def refresh():
     return execute('Container.Refresh')
 
+
 def busy():
     return execute('ActivateWindow(busydialog)')
 
+
 def idle():
     return execute('Dialog.Close(busydialog)')
+
 
 def queueItem():
     return execute('Action(Queue)')

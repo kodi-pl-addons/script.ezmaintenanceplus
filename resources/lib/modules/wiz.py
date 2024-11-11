@@ -32,8 +32,8 @@ dp           = xbmcgui.DialogProgress()
 dialog       = xbmcgui.Dialog()
 addonInfo    = xbmcaddon.Addon().getAddonInfo
 
-AddonTitle="EZ Maintenance+"
-AddonID ='script.ezmaintenanceplus'
+AddonTitle= "EZ Maintenance+"
+AddonID = 'script.ezmaintenanceplus'
 
 # Code to map the old translatePath
 try:
@@ -41,10 +41,12 @@ try:
 except AttributeError:
     translatePath = xbmc.translatePath
 
+
 def get_Kodi_Version():
-    try: KODIV        =  float(xbmc.getInfoLabel("System.BuildVersion")[:4])
+    try: KODIV = float(xbmc.getInfoLabel("System.BuildVersion")[:4])
     except: KODIV = 0
     return KODIV
+
 
 def open_Settings():
     open_Settings = xbmcaddon.Addon(id=AddonID).openSettings()
@@ -95,14 +97,14 @@ def FIX_SPECIAL():
 
 def skinswap():
 
-    skin         =  xbmc.getSkinDir()
-    KODIV        =  get_Kodi_Version()
+    skin = xbmc.getSkinDir()
+    KODIV = get_Kodi_Version()
     skinswapped = 0
     from resources.lib.modules import skinSwitch
 
-    #SWITCH THE SKIN IF THE CURRENT SKIN IS NOT CONFLUENCE
-    if skin not in ['skin.confluence','skin.estuary']:
-        choice = xbmcgui.Dialog().yesno(AddonTitle, 'We can try to reset to the default Kodi Skin...' + '\n' + 'Do you want to Proceed?', yeslabel='Yes',nolabel='No')
+    # SWITCH THE SKIN IF THE CURRENT SKIN IS NOT CONFLUENCE
+    if skin not in ['skin.confluence', 'skin.estuary']:
+        choice = xbmcgui.Dialog().yesno(AddonTitle, 'We can try to reset to the default Kodi Skin...' + '\n' + 'Do you want to Proceed?', yeslabel='Yes', nolabel='No')
         if choice == 1:
 
             skin = 'skin.estuary' if KODIV >= 17 else 'skin.confluence'
@@ -110,28 +112,29 @@ def skinswap():
             skinswapped = 1
             time.sleep(1)
 
-    #IF A SKIN SWAP HAS HAPPENED CHECK IF AN OK DIALOG (CONFLUENCE INFO SCREEN) IS PRESENT, PRESS OK IF IT IS PRESENT
+    # IF A SKIN SWAP HAS HAPPENED CHECK IF AN OK DIALOG (CONFLUENCE INFO SCREEN) IS PRESENT, PRESS OK IF IT IS PRESENT
     if skinswapped == 1:
         if not xbmc.getCondVisibility("Window.isVisible(yesnodialog)"):
-            xbmc.executebuiltin( "Action(Select)" )
+            xbmc.executebuiltin("Action(Select)")
 
-    #IF THERE IS NOT A YES NO DIALOG (THE SCREEN ASKING YOU TO SWITCH TO CONFLUENCE) THEN SLEEP UNTIL IT APPEARS
+    # IF THERE IS NOT A YES NO DIALOG (THE SCREEN ASKING YOU TO SWITCH TO CONFLUENCE) THEN SLEEP UNTIL IT APPEARS
     if skinswapped == 1:
         while not xbmc.getCondVisibility("Window.isVisible(yesnodialog)"):
             time.sleep(1)
 
-    #WHILE THE YES NO DIALOG IS PRESENT PRESS LEFT AND THEN SELECT TO CONFIRM THE SWITCH TO CONFLUENCE.
+
+    # WHILE THE YES NO DIALOG IS PRESENT PRESS LEFT AND THEN SELECT TO CONFIRM THE SWITCH TO CONFLUENCE.
     if skinswapped == 1:
         while xbmc.getCondVisibility("Window.isVisible(yesnodialog)"):
-            xbmc.executebuiltin( "Action(Left)" )
-            xbmc.executebuiltin( "Action(Select)" )
+            xbmc.executebuiltin("Action(Left)")
+            xbmc.executebuiltin("Action(Select)")
             time.sleep(1)
 
-    skin         =  xbmc.getSkinDir()
+    skin = xbmc.getSkinDir()
 
-    #CHECK IF THE SKIN IS NOT CONFLUENCE
-    if skin not in ['skin.confluence','skin.estuary']:
-        choice = xbmcgui.Dialog().yesno(AddonTitle, '[COLOR lightskyblue][B]ERROR: AUTOSWITCH WAS NOT SUCCESFULL[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]CLICK YES TO MANUALLY SWITCH TO CONFLUENCE NOW[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]YOU CAN PRESS NO AND ATTEMPT THE AUTO SWITCH AGAIN IF YOU WISH[/B][/COLOR]', yeslabel='[B][COLOR green]YES[/COLOR][/B]',nolabel='[B][COLOR lightskyblue]NO[/COLOR][/B]')
+    # CHECK IF THE SKIN IS NOT CONFLUENCE
+    if skin not in ['skin.confluence', 'skin.estuary']:
+        choice = xbmcgui.Dialog().yesno(AddonTitle, '[COLOR lightskyblue][B]ERROR: AUTOSWITCH WAS NOT SUCCESFULL[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]CLICK YES TO MANUALLY SWITCH TO CONFLUENCE NOW[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]YOU CAN PRESS NO AND ATTEMPT THE AUTO SWITCH AGAIN IF YOU WISH[/B][/COLOR]', yeslabel='[B][COLOR green]YES[/COLOR][/B]', nolabel='[B][COLOR lightskyblue]NO[/COLOR][/B]')
         if choice == 1:
             xbmc.executebuiltin("ActivateWindow(appearancesettings)")
             return
@@ -150,14 +153,14 @@ def backup(mode='full'):
         return
 
     if mode == 'full':
-        defaultName    =  "kodi_backup"
-        BACKUPDATA     =  control.HOME
+        defaultName = "kodi_backup"
+        BACKUPDATA = control.HOME
         getSetting = xbmcaddon.Addon().getSetting
         if getSetting('BackupFixSpecialHome') == 'true':
             FIX_SPECIAL()
     elif mode == 'userdata':
-        defaultName    =  "kodi_settings"
-        BACKUPDATA     =  control.USERDATA
+        defaultName = "kodi_settings"
+        BACKUPDATA = control.USERDATA
     else: return
     if os.path.exists(BACKUPDATA):
         if not backupdir == '':
@@ -173,7 +176,7 @@ def backup(mode='full'):
                     maintenance.clearCache(mode='silent')
                     maintenance.deleteThumbnails(mode='silent')
                     maintenance.purgePackages(mode='silent')
-                except:pass
+                except: pass
                 exclude_dirs = ['']
                 canceled = CreateZip(BACKUPDATA, backup_zip, 'Creating Backup', 'Backing up files', exclude_dirs, exclude_database)
                 if canceled:
@@ -184,6 +187,7 @@ def backup(mode='full'):
         else:
             dialog.ok(AddonTitle, 'No backup location found: Please setup your Backup location')
 
+
 def restoreFolder():
     names = []
     links = []
@@ -193,12 +197,13 @@ def restoreFolder():
         control.openSettings(query='2.0')
         return
     for zipFile in os.listdir(zipFolder):
-            if zipFile.endswith(".zip"):
-                url = translatePath(os.path.join(zipFolder, zipFile))
-                names.append(zipFile)
-                links.append(url)
+        if zipFile.endswith(".zip"):
+            url = translatePath(os.path.join(zipFolder, zipFile))
+            names.append(zipFile)
+            links.append(url)
     select = control.selectDialog(names)
     if select != -1: restore(links[select])
+
 
 def restore(zipFile):
     yesDialog = dialog.yesno(AddonTitle, 'This will overwrite all your current settings ... Are you sure?', yeslabel='Yes', nolabel='No')
@@ -213,8 +218,7 @@ def restore(zipFile):
             else:
                 dialog.ok(AddonTitle, 'Restore Complete')
             xbmc.executebuiltin('ShutDown')
-        except:pass
-
+        except: pass
 
 
 def CreateZip(folder, zip_filename, message_header, message1, exclude_dirs, exclude_files):
@@ -227,7 +231,7 @@ def CreateZip(folder, zip_filename, message_header, message1, exclude_dirs, excl
     except: pass
     for base, dirs, files in os.walk(folder):
         for file in files: ITEM.append(file)
-    N_ITEM =len(ITEM)
+    N_ITEM = len(ITEM)
     count = 0
     canceled = False
     zip_file = zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED, allowZip64 = True)
@@ -253,7 +257,7 @@ def CreateZip(folder, zip_filename, message_header, message1, exclude_dirs, excl
                 file = os.path.normpath(file)
                 arcname = file[len(abs_src) + 1:]
                 zip_file.write(file, arcname)
-        except:pass
+        except: pass
     zip_file.close()
 
     return canceled
@@ -278,7 +282,7 @@ def ExtractNOProgress(_in, _out):
 def ExtractWithProgress(_in, _out, dp):
     zin = zipfile.ZipFile(_in,  'r')
     nFiles = float(len(zin.infolist()))
-    count  = 0
+    count = 0
     errors = 0
     canceled = False
     try:
@@ -292,12 +296,12 @@ def ExtractWithProgress(_in, _out, dp):
             except: name = item.filename
             label = '[COLOR skyblue][B]%s[/B][/COLOR]' % str(name)
             if PY2:
-                dp.update(int(update),'Extracting... Errors:  ' + str(errors) , label, '')
+                dp.update(int(update), 'Extracting... Errors:  ' + str(errors), label, '')
             else:
-                dp.update(int(update),'Extracting... Errors:  ' + str(errors) + '\n' + label)
+                dp.update(int(update), 'Extracting... Errors:  ' + str(errors) + '\n' + label)
             try: zin.extract(item, _out)
             except Exception as e:
-                print ("EXTRACTING ERRORS", e)
+                print("EXTRACTING ERRORS", e)
                 pass
 
     except Exception as e:
@@ -307,29 +311,33 @@ def ExtractWithProgress(_in, _out, dp):
 
 # INSTALL BUILD
 def buildInstaller(url):
-    destination = dialog.browse(type=0, heading='Select Download Directory', shares='files',useThumbs=True, treatAsFolder=True, enableMultiple=False)
+    destination = dialog.browse(type=0, heading='Select Download Directory', shares='files', useThumbs=True, treatAsFolder=True, enableMultiple=False)
     if destination:
         dest = translatePath(os.path.join(destination, 'custom_build.zip'))
         downloader(url, dest)
         time.sleep(2)
-        dp.create("Installing Build","In Progress..." + '\n' + "Please Wait")
+        dp.create("Installing Build", "In Progress..." + '\n' + "Please Wait")
         dp.update(0, "" + '\n' + "Extracting Zip Please Wait")
         ExtractZip(dest, control.HOME, dp)
         time.sleep(2)
         dp.close()
-        dialog.ok(AddonTitle,'Installation Complete...' + '\n' + 'Your interface will now be reset' + '\n' + 'Click ok to Start...')
+        dialog.ok(AddonTitle, 'Installation Complete...' + '\n' + 'Your interface will now be reset' + '\n' + 'Click ok to Start...')
         xbmc.executebuiltin('LoadProfile(Master user)')
+
+
 # DOWNLOADER
 class customdownload(FancyURLopener):
     version = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
 
-def downloader(url, dest, dp = None):
+
+def downloader(url, dest, dp=None):
     if not dp:
         dp = xbmcgui.DialogProgress()
         dp.create(AddonTitle)
     dp.update(0)
     start_time=time.time()
     customdownload().retrieve(url, dest, lambda nb, bs, fs, url=url: _pbhook(nb, bs, fs, dp, start_time))
+
 
 def _pbhook(numblocks, blocksize, filesize, dp, start_time):
         try:

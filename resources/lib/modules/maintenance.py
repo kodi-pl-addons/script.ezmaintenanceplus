@@ -10,22 +10,25 @@ try:
 except AttributeError:
     translatePath = xbmc.translatePath
 
-thumbnailPath = translatePath('special://thumbnails');
+thumbnailPath = translatePath('special://thumbnails')
 cachePath = os.path.join(translatePath('special://home'), 'cache')
 tempPath = translatePath('special://temp')
-addonPath = os.path.join(os.path.join(translatePath('special://home'), 'addons'),'script.ezmaintenance')
+addonPath = os.path.join(os.path.join(translatePath('special://home'), 'addons'), 'script.ezmaintenance')
 
 mediaPath = os.path.join(addonPath, 'media')
 databasePath = translatePath('special://database')
-THUMBS    =  translatePath(os.path.join('special://home/userdata/Thumbnails',''))
+THUMBS = translatePath(os.path.join('special://home/userdata/Thumbnails', ''))
 
 addon_id = 'script.ezmaintenanceplus'
-fanart = translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
+fanart = translatePath(os.path.join('special://home/addons/' + addon_id, 'fanart.jpg'))
 iconpath = translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
+
+
 class cacheEntry:
     def __init__(self, namei, pathi):
         self.name = namei
         self.path = pathi
+
 
 def clearCache(mode='verbose'):
     if os.path.exists(cachePath)==True:
@@ -113,23 +116,23 @@ def clearCache(mode='verbose'):
                 else:
                     pass
 
-    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance' , 'Clean Completed' , '3000', iconpath))
+    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance', 'Clean Completed', '3000', iconpath))
+
 
 def deleteThumbnails(mode='verbose'):
 
     if os.path.exists(thumbnailPath)==True:
-            # dialog = xbmcgui.Dialog()
-            # if dialog.yesno("Delete Thumbnails", "This option deletes all thumbnails" + '\n' + "Are you sure you want to do this?"):
-                for root, dirs, files in os.walk(thumbnailPath):
-                    file_count = 0
-                    file_count += len(files)
-                    if file_count > 0:
-                        for f in files:
-                            try:
-                                os.unlink(os.path.join(root, f))
-                            except:
-                                pass
-
+        # dialog = xbmcgui.Dialog()
+        # if dialog.yesno("Delete Thumbnails", "This option deletes all thumbnails" + '\n' + "Are you sure you want to do this?"):
+        for root, dirs, files in os.walk(thumbnailPath):
+            file_count = 0
+            file_count += len(files)
+            if file_count > 0:
+                for f in files:
+                    try:
+                        os.unlink(os.path.join(root, f))
+                    except:
+                        pass
 
     if os.path.exists(THUMBS):
         try:
@@ -144,11 +147,12 @@ def deleteThumbnails(mode='verbose'):
             pass
 
     try:
-        text13 = os.path.join(databasePath,"Textures13.db")
+        text13 = os.path.join(databasePath, "Textures13.db")
         os.unlink(text13)
     except:
         pass
-    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance' , 'Clean Thumbs Completed' , '3000', iconpath))
+    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance', 'Clean Thumbs Completed', '3000', iconpath))
+
 
 def purgePackages(mode='verbose'):
 
@@ -168,7 +172,7 @@ def purgePackages(mode='verbose'):
                 shutil.rmtree(os.path.join(root, d))
             # dialog = xbmcgui.Dialog()
             # dialog.ok("Maintenance", "Deleting Packages all done")
-    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance' , 'Clean Packages Completed' , '3000', iconpath))
+    if mode == 'verbose': xbmc.executebuiltin('Notification(%s, %s, %s, %s)' % ('Maintenance', 'Clean Packages Completed', '3000', iconpath))
 
 
 def determineNextMaintenance():

@@ -10,12 +10,12 @@ else:
     import urllib
     urljoin = urllib.parse.urljoin
 
+
 class api:
     def __init__(self):
         self.base_link = 'https://pastebin.com'
         self.paste_link = '/api/api_post.php'
         self.apiKey = base64.b64decode('MjNkNTNhMGMyMTdlZWY2OGM5ZWE3NDY0NDIwZTMzNmU=')
-
 
     def paste(self, text):
         url = urljoin(self.base_link, self.paste_link)
@@ -25,4 +25,3 @@ class api:
             result = result.decode('UTF-8')
         if not self.base_link in result: return "Error: " + result
         else: return result
-

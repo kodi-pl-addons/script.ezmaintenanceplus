@@ -18,6 +18,7 @@ try:
 except:
     import simplejson
 
+
 def getOld(old):
     try:
         old = '"%s"' % old
@@ -31,6 +32,7 @@ def getOld(old):
         pass
     return None
 
+
 def setNew(new, value):
     try:
         new = '"%s"' % new
@@ -40,6 +42,7 @@ def setNew(new, value):
     except:
         pass
     return None
+
 
 def swapSkins(skin):
     old = 'lookandfeel.skin'
